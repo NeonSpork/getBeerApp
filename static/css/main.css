@@ -7,7 +7,7 @@ body {
   font-family: "Yellowtail", sans-serif;
 
   /* Location of the image */
-  background-image: url("/static/img/default_background.png");
+  background-image: url("/static/img/bg.png");
 
   /* Image is centered vertically and horizontally at all times */
   background-position: center center;
