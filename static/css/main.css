@@ -50,13 +50,12 @@ body {
 }
 
 .flexbox-sensors {
-  display: flex;
-  flex-direction: column;
+  border: 5px solid mediumvioletred;
+  margin: auto;
   position: fixed;
   bottom: 0;
   left: 0.2em;
-  border: 5px solid mediumvioletred;
-  margin: auto;
+  justify-content: center;
 }
 
 .flexbox-item-beerButton {
