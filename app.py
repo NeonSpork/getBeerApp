@@ -17,12 +17,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def default():
-    temp = 10;
-    return render_template('default.html', temp=temp)
+    temp = 10
+    pints = 42
+    return render_template('default.html', temp=temp, pints=pints)
 
 @app.route('/secret')
 def secret():
     return render_template('secret.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True, host='0.0.0.0')

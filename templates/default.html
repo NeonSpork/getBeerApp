@@ -1,7 +1,15 @@
-{% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
-  <!-- <img src="{{url_for('static', filename='img/default_background.png')}}"> -->
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
   <div class="content">
-    <h1>{{temp}}</h1>
+    <div class="flexbox-content">
+      <div class="flexbox-sensors">
+        <p>{{temp}} &degC<br>{{pints}} pints</p>
+      </div>
+      <div class="flexbox-item-beerButton">
+        <p>beerButton</p>
+      </div>
+    </div>
   </div>
-</div>
 {% endblock %}
