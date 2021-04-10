@@ -1,9 +1,12 @@
 # getBeerApp
-WebApp version of getBeer - built with Python3 and Flask
 
-### First Header
+### Overview
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed odio dignissim, faucibus dui sed, vehicula dui. Cras mi sem, semper a erat sit amet, consequat aliquam lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id nulla et sem accumsan porta. Etiam tempus pretium metus, ac consectetur odio pellentesque sed. Proin in rhoncus tortor, quis scelerisque est. Proin nibh nisl, tincidunt vitae est non, dictum facilisis odio. Donec a fringilla ante.
+This is a simple app that serves up a web interface for a custom built kegerator, built with Python3 and Flask.
+
+### Getting Started
+
+You can simply run `python -m pip install -r requirements.txt` and pip will install the requirements for you. From there you just run `python app.py` to start the app.
 
 
 ### Second Header
