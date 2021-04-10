@@ -29,8 +29,8 @@ body {
 .content {
   position: absolute;
   bottom:0;
-  width: 100em;
-  font-size: 7.5em;
+  width: 100vw;
+  font-size: 7.5vh;
   color: white;
   text-shadow: 0px 0px 1px #6302ff,
                0px 0px 2px #6302ff,
@@ -51,10 +51,10 @@ body {
 
 .flexbox-sensors {
   /* border: 5px solid mediumvioletred; */
-  margin: auto;
+  /* margin: auto; */
   position: fixed;
   bottom: 0;
-  left: 0.5em;
+  left: 5vw;
   justify-content: center;
 }
 
@@ -63,7 +63,7 @@ body {
   margin: auto;
   position: fixed;
   bottom: 0;
-  right: 0.2em;
+  right: 5vw;
 }
 
 .clear-button {
