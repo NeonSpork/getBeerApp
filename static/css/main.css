@@ -28,7 +28,7 @@ body {
 
 .content {
   position: absolute;
-  bottom:0;
+  bottom:0vh;
   width: 100vw;
   font-size: 7.5vh;
   color: white;
@@ -53,7 +53,7 @@ body {
   /* border: 5px solid mediumvioletred; */
   /* margin: auto; */
   position: fixed;
-  bottom: 0;
+  bottom: 0vh;
   left: 5vw;
   justify-content: center;
 }
@@ -62,7 +62,7 @@ body {
   /* border: 5px solid mediumvioletred; */
   margin: auto;
   position: fixed;
-  bottom: 0;
+  bottom: 0vh;
   right: 5vw;
 }
 
