@@ -15,10 +15,13 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.IN)  # temp sensor
 GPIO.setup(2, GPIO.IN)  # weight sensor DT
 GPIO.setup(3, GPIO.IN)  # weight sensor SDK
-tempSens = W1ThermSensor()
 
 def getTemp():
-    return tempSens.get_temperature()
+    try:
+        temp = W1ThermSensor().get_temperature()
+    except:
+        temp = "err"
+    return temp
 
 
 app = Flask(__name__)
