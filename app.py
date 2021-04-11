@@ -3,13 +3,8 @@ import RPi.GPIO as GPIO
 from hx711 import HX711
 from w1thermsensor import W1ThermSensor
 
-# try:
-#     hx711 = HX711(
-#         dout_pin=
-#         pd_sck_pin=
-#         channel='A',
-#         gain=64
-#     )
+app = Flask(__name__)
+
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.IN)  # temp sensor
@@ -23,9 +18,6 @@ def getTemp():
     except Exception as e:
         temp = e
     return temp
-
-
-app = Flask(__name__)
 
 @app.route('/')
 def default():
