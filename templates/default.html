@@ -5,7 +5,7 @@
 <script type=text/javascript> $(function() { $("#spoutControl").mouseup(function (event) { $.getJSON('/endPour', { }, function(data) { }); return false; }); }); </script>
 <script type=text/javascript> $(function() { $("#spoutControl").mousedown(function (event) { $.getJSON('/beginPour', { }, function(data) { }); return false; }); }); </script>
 <script>
-  var temp = self.setInterval(getTemp, 500);
+  temp = self.setInterval(getTemp, 500);
 </script>
 
   <div class="content">
