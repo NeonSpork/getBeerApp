@@ -25,10 +25,17 @@ def default():
 def secret():
     return render_template('secret.html')
 
-@app.route('/beerButton')
-def beerButton():
+@app.route('/beginPour')
+def beginPour():
     # valveOperator.openValve(20)
-    return("nothing")
+    print('Starting pour...')
+    return 'nothing'
+
+@app.route('/endPour')
+def endPour():
+    # valveOperator.closeValve(20)
+    print('Pour finished.')
+    return 'nothing'
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

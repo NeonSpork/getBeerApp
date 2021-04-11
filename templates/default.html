@@ -2,17 +2,16 @@
 {% block head %}
 {% endblock %}
 {% block body %}
+<script type=text/javascript> $(function() { $("#spoutControl").mouseup(function (event) { $.getJSON('/endPour', { }, function(data) { }); return false; }); }); </script>
+<script type=text/javascript> $(function() { $("#spoutControl").mousedown(function (event) { $.getJSON('/beginPour', { }, function(data) { }); return false; }); }); </script>
+
   <div class="content">
     <div class="flexbox-content">
       <div class="flexbox-sensors">
         <p>{{temp}} &degC<br>{{pints}} pints</p>
       </div>
       <div class="flexbox-item-beerButton">
-        <button class="clear-button" href="beerButton">
-          <img src="/static/img/beer_stein.png">
-            <!-- <a href="beerButton"> -->
-          </img>
-        </input>
+          <input type = "image" src="/static/img/beer_stein.png" id = "spoutControl" alt = "Spout Control Button" />
       </div>
     </div>
   </div>
