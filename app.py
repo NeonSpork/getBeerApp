@@ -19,8 +19,8 @@ GPIO.setup(3, GPIO.IN)  # weight sensor SDK
 def getTemp():
     try:
         temp = W1ThermSensor().get_temperature()
-    except:
-        temp = "err"
+    except Exception as e:
+        temp = e
     return temp
 
 
