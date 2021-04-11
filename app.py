@@ -16,6 +16,7 @@ GPIO.setup(4, GPIO.IN)  # temp sensor
 GPIO.setup(2, GPIO.IN)  # weight sensor DT
 GPIO.setup(3, GPIO.IN)  # weight sensor SDK
 
+@app.route('/getTemp')
 def getTemp():
     try:
         temp = W1ThermSensor().get_temperature()
@@ -30,7 +31,7 @@ app = Flask(__name__)
 def default():
     temp = getTemp()
     pints = 42
-    return render_template('default.html', temp=temp, pints=pints)
+    return render_template('default.html')
 
 @app.route('/secret')
 def secret():
