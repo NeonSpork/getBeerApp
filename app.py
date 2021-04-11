@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for
-# from hx711 import HX711
-from ds18b20 import DS18B20
+from hx711 import HX711
+from w1thermsensor import W1ThermSensor
 
 # try:
 #     hx711 = HX711(
@@ -10,10 +10,10 @@ from ds18b20 import DS18B20
 #         gain=64
 #     )
 
-tempSens = DS18B20(DS18B20.get_available_sensors())
+tempSens = W1ThermSensor()
 
 def getTemp():
-    return tempSens.get_temperature
+    return tempSens.get_temperature()
 
 
 app = Flask(__name__)
