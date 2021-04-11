@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+import RPi.GPIO as GPIO
 from hx711 import HX711
 from w1thermsensor import W1ThermSensor
 
@@ -9,7 +10,11 @@ from w1thermsensor import W1ThermSensor
 #         channel='A',
 #         gain=64
 #     )
-
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(4, GPIO.IN)  # temp sensor
+GPIO.setup(2, GPIO.IN)  # weight sensor DT
+GPIO.setup(3, GPIO.IN)  # weight sensor SDK
 tempSens = W1ThermSensor()
 
 def getTemp():
@@ -42,3 +47,4 @@ def endPour():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+    GPIO.cleanup()
