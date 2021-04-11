@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for
-# from hx711 import HX711
-# from ds18b20 import DS18B20
+from hx711 import HX711
+from ds18b20 import DS18B20
 
 # try:
 #     hx711 = HX711(
