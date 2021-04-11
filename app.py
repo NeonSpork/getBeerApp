@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for
-from hx711 import HX711
+# from hx711 import HX711
 from ds18b20 import DS18B20
 
 # try:
@@ -10,14 +10,17 @@ from ds18b20 import DS18B20
 #         gain=64
 #     )
 
-# def getTemp():
+tempSens = DS18B20(DS18B20.get_available_sensors())
+
+def getTemp():
+    return tempSens.get_temperature
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def default():
-    temp = 10
+    temp = getTemp()
     pints = 42
     return render_template('default.html', temp=temp, pints=pints)
 
