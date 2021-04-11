@@ -23,7 +23,7 @@ def getTemp():
 def default():
     temp = getTemp()
     pints = 42
-    return render_template('default.html')
+    return render_template('default.html', temp = temp, pints = pints)
 
 @app.route('/secret')
 def secret():
