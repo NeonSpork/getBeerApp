@@ -7,18 +7,18 @@ app = Flask(__name__)
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(4, GPIO.IN)  # temp sensor
+# GPIO.setup(4, GPIO.IN)  # temp sensor
 GPIO.setup(2, GPIO.IN)  # weight sensor DT
 GPIO.setup(3, GPIO.IN)  # weight sensor SDK
 
 hx = HX711(dout=2, pd_sck=3)
 hx.set_offset(8234508)  # This gets calibrated to zero the sensor
 hx.set_scale(-20.9993)
+sensor = W1ThermSensor()
 
 @app.route('/getTemp')
 def getTemp():
     try:
-        sensor = W1ThermSensor()
         temp = sensor.get_temperature()
     except Exception as e:
         temp = e
