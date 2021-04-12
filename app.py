@@ -11,18 +11,35 @@ GPIO.setup(4, GPIO.IN)  # temp sensor
 GPIO.setup(2, GPIO.IN)  # weight sensor DT
 GPIO.setup(3, GPIO.IN)  # weight sensor SDK
 
+tempSensor = W1ThermSensor()
+hx = HX711(dout_pin=2,
+           pd_sck_pin=3,
+           channel='A',
+           gain=64)
+hx.set_offset(8234508)  # This gets calibrated to zero the sensor
+hx.set_scale_ratio(-20.9993)
+
 @app.route('/getTemp')
 def getTemp():
     try:
-        temp = W1ThermSensor().get_temperature()
+        temp = tempSensor.get_temperature()
     except Exception as e:
         temp = e
     return temp
 
+@app.route('/getPints')
+def getPints():
+    try:
+        hx.reset()
+        pints = hx.get_raw_data()
+    except Exception as e:
+        pints = e.__name__
+    return pints
+
 @app.route('/')
 def default():
     temp = getTemp()
-    pints = 42
+    pints = getPints()
     return render_template('default.html', temp = temp, pints = pints)
 
 @app.route('/secret')
