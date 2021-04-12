@@ -2,7 +2,7 @@
 {% block head %}
 {% endblock %}
 {% block body %}
-<script type=text/javascript> $(function() { $("#spoutControl").mouseup(function (event) { $.getJSON('/endPour', { }, function(data) { window.location.reload(); }); return false; }); }); </script>
+<script type=text/javascript> $(function() { $("#spoutControl").mouseup(function (event) { $.getJSON('/endPour', { }, function(data) { }); window.location.reload(); }); }); </script>
 <script type=text/javascript> $(function() { $("#spoutControl").mousedown(function (event) { $.getJSON('/beginPour', { }, function(data) { }); return false; }); }); </script>
 
   <div class="content">
@@ -16,12 +16,13 @@
     </div>
   </div>
 
-<script>
+<!-- <script>
     window.setInterval('refresh()', 60000);     // Call a function every 60000 milliseconds (OR 60 seconds).
 
     // Refresh or reload page.
     function refresh() {
-        window .location.reload();
+        // window.location.reload();
+        location+=''
     }
-</script>
+</script> -->
 {% endblock %}

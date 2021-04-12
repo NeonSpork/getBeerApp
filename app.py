@@ -40,8 +40,8 @@ def beginPour():
 def endPour():
     temp = getTemp()
     pints = getPints()
-    return false
-    # return render_template('default.html', temp = temp, pints = pints)
+    # return false
+    return render_template('default.html', temp = temp, pints = pints)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
