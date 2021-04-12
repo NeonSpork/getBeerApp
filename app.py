@@ -32,7 +32,7 @@ def getPints():
         if pints < 0:
             pints = 0
     except Exception as e:
-        pints = e.__name__
+        pints = e
     return pints
 
 @app.route('/')
