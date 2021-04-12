@@ -18,7 +18,8 @@ hx.set_scale(-20.9993)
 @app.route('/getTemp')
 def getTemp():
     try:
-        temp = W1ThermSensor.get_temperature()
+        sensor = W1ThermSensor()
+        temp = sensor.get_temperature()
     except Exception as e:
         temp = e
     return temp
