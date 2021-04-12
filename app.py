@@ -7,9 +7,11 @@ app = Flask(__name__)
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-# GPIO.setup(4, GPIO.IN)  # temp sensor
-GPIO.setup(2, GPIO.IN)  # weight sensor DT
-GPIO.setup(3, GPIO.IN)  # weight sensor SDK
+GPIO.setup(4, GPIO.IN)  # Temp sensor DS18B20
+GPIO.setup(2, GPIO.IN)  # HX711 load sensor DT
+GPIO.setup(3, GPIO.IN)  # HX711 load sensor SDK
+GPIO.setup(5, GPIO.OUT, initial=0)  # Output pin to solenoid BEER valve
+#GPIO.setup(6, GPIO.OUT, initial=0)  # Output pin to solenoid VODKA valve
 
 hx = HX711(dout=2, pd_sck=3)
 hx.set_offset(8234508)  # This gets calibrated to zero the sensor
@@ -47,13 +49,13 @@ def secret():
 
 @app.route('/beginPour')
 def beginPour():
-    # valveOperator.openValve(20)
+    GPIO.output(5, True)
     print('Starting pour...')
     return 'nothing'
 
 @app.route('/endPour')
 def endPour():
-    # valveOperator.closeValve(20)
+    GPIO.output(5, False)
     print('Pour finished.')
     return 'nothing'
 
