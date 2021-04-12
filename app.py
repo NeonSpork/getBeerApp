@@ -21,7 +21,7 @@ def getPints():
         pints = e.__name__
     return pints
 
-@app.route('/')
+@app.route('/', methods= ['GET'])
 def default():
     temp = getTemp()
     pints = getPints()
@@ -36,10 +36,11 @@ def beginPour():
     print('Starting pour...')
     return 'nothing'
 
-@app.route('/endPour')
+@app.route('/endPour', methods= ['GET'])
 def endPour():
-    print('Pour finished.')
-    return 'nothing'
+    temp = getTemp()
+    pints = getPints()
+    return render_template('default.html', temp = temp, pints = pints)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
