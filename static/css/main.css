@@ -4,10 +4,11 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  font-family: "Yellowtail", sans-serif;
+  /* FIXME */
+  font-family: "Harlow Solid Italic", sans-serif; 
 
   /* Location of the image */
-  background-image: url("/static/img/bg.png");
+  background-image: url("/static/img/brick_wall.png");
 
   /* Image is centered vertically and horizontally at all times */
   background-position: center center;
