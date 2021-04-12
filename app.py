@@ -50,15 +50,12 @@ def secret():
 @app.route('/beginPour')
 def beginPour():
     GPIO.output(5, True)
-    print('Starting pour...')
     return 'nothing'
 
 @app.route('/endPour', methods= ['GET'])
 def endPour():
     GPIO.output(5, False)
-    temp = getTemp()
-    pints = getPints()
-    return render_template('default.html', temp = temp, pints = pints)
+    return 'nothing'
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
