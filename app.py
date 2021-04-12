@@ -1,11 +1,12 @@
 from flask import Flask, render_template, url_for
+import time
 
 app = Flask(__name__)
 
 @app.route('/getTemp')
 def getTemp():
     try:
-        temp = -99
+        temp = time.localtime()
     except Exception as e:
         temp = e.__name__
     return temp
@@ -13,7 +14,7 @@ def getTemp():
 @app.route('/getPints')
 def getPints():
     try:
-        pints = -99
+        pints = time.localtime()
     except Exception as e:
         pints = e.__name__
     return pints
