@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Harlow;
+  src: url("/static/fonts/HARLOWSI.TTF");
+  font-weight: regular;
+}
+
 html,
 body {
   /* Full height */
@@ -5,7 +11,8 @@ body {
   width: 100vw;
   margin: 0;
   /* FIXME */
-  font-family: "Harlow Solid Italic", sans-serif; 
+  font-family: "Harlow"; 
+  /* src: "{{ url_for('static', filename='/fonts/HARLOWSI.TTF') }}"; */
 
   /* Location of the image */
   background-image: url("/static/img/brick_wall.png");
