@@ -11,10 +11,7 @@ GPIO.setup(4, GPIO.IN)  # temp sensor
 GPIO.setup(2, GPIO.IN)  # weight sensor DT
 GPIO.setup(3, GPIO.IN)  # weight sensor SDK
 
-hx = HX711(dout_pin=2,
-           pd_sck_pin=3,
-           channel='A',
-           gain=64)
+hx = HX711(dout=2, pd_sck=3)
 hx.set_offset(8234508)  # This gets calibrated to zero the sensor
 hx.set_scale_ratio(-20.9993)
 
