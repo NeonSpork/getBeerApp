@@ -1,28 +1,27 @@
 from flask import Flask, render_template, url_for
-import RPi.GPIO as GPIO
-from hx711 import HX711
-from w1thermsensor import W1ThermSensor
 
 app = Flask(__name__)
-
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(4, GPIO.IN)  # temp sensor
-GPIO.setup(2, GPIO.IN)  # weight sensor DT
-GPIO.setup(3, GPIO.IN)  # weight sensor SDK
 
 @app.route('/getTemp')
 def getTemp():
     try:
-        temp = W1ThermSensor().get_temperature()
+        temp = -99
     except Exception as e:
-        temp = e
+        temp = e.__name__
     return temp
+
+@app.route('/getPints')
+def getPints():
+    try:
+        pints = -99
+    except Exception as e:
+        pints = e.__name__
+    return pints
 
 @app.route('/')
 def default():
     temp = getTemp()
-    pints = 42
+    pints = getPints()
     return render_template('default.html', temp = temp, pints = pints)
 
 @app.route('/secret')
@@ -31,13 +30,11 @@ def secret():
 
 @app.route('/beginPour')
 def beginPour():
-    # valveOperator.openValve(20)
     print('Starting pour...')
     return 'nothing'
 
 @app.route('/endPour')
 def endPour():
-    # valveOperator.closeValve(20)
     print('Pour finished.')
     return 'nothing'
 
