@@ -6,7 +6,8 @@ app = Flask(__name__)
 @app.route('/getTemp')
 def getTemp():
     try:
-        temp = time.localtime()
+        t = time.localtime()
+        temp = "{}:{}:{}".format(t.tm_hour, t.tm_min, t.tm_sec)
     except Exception as e:
         temp = e.__name__
     return temp
@@ -14,7 +15,8 @@ def getTemp():
 @app.route('/getPints')
 def getPints():
     try:
-        pints = time.localtime()
+        t = time.localtime()
+        pints = "{}:{}:{}".format(t.tm_hour, t.tm_min, t.tm_sec)
     except Exception as e:
         pints = e.__name__
     return pints
