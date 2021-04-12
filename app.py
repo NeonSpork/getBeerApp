@@ -11,7 +11,6 @@ GPIO.setup(4, GPIO.IN)  # temp sensor
 GPIO.setup(2, GPIO.IN)  # weight sensor DT
 GPIO.setup(3, GPIO.IN)  # weight sensor SDK
 
-tempSensor = W1ThermSensor()
 hx = HX711(dout_pin=2,
            pd_sck_pin=3,
            channel='A',
@@ -22,7 +21,7 @@ hx.set_scale_ratio(-20.9993)
 @app.route('/getTemp')
 def getTemp():
     try:
-        temp = tempSensor.get_temperature()
+        temp = W1ThermSensor.get_temperature()
     except Exception as e:
         temp = e
     return temp
