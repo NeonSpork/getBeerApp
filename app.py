@@ -26,7 +26,6 @@ def getTemp():
 @app.route('/getPints')
 def getPints():
     try:
-        hx.reset()
         grams = hx.get_grams(times=1)
         pints = int((grams - 4250)*0.5)  # dry weight of keg is ca. 4250g
         if pints < 0:
