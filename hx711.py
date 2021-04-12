@@ -50,10 +50,12 @@ class HX711:
 
         # Setup the GPIO Pin as input
         GPIO.setup(self.DOUT, GPIO.IN)
-
-        # Power up the chip
-        self.power_up()
-        self.set_gain(gain)
+        try:
+            # Power up the chip
+            self.power_up()
+            self.set_gain(gain)
+        except:
+            print("No chip detected. Check wiring")
 
     def set_gain(self, gain=128):
 
