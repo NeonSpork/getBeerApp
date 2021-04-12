@@ -2,7 +2,7 @@
 {% block head %}
 {% endblock %}
 {% block body %}
-<script type=text/javascript> $(function() { $("#spoutControl").mouseup(function (event) { $.getJSON('/endPour', { }, function(data) { }); return false; }); }); </script>
+<script type=text/javascript> $(function() { $("#spoutControl").mouseup(function (event) { $.getJSON('/endPour', { }, function(data) { }); window.location.reload(); }); }); </script>
 <script type=text/javascript> $(function() { $("#spoutControl").mousedown(function (event) { $.getJSON('/beginPour', { }, function(data) { }); return false; }); }); </script>
 <script>
  temp = self.setInterval(getTemp, 500);
