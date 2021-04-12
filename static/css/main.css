@@ -34,13 +34,23 @@ body {
   background-color: #464646;
 }
 
+p {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .content {
   position: absolute;
   bottom:0vh;
   width: 100vw;
   font-size: 7.5vh;
   color: white;
-  text-shadow: 0px 0px 1px #6302ff,
+}
+
+.neonGlow {
+  /* text-shadow: 0px 0px 1px #6302ff,
                0px 0px 2px #6302ff,
                0px 0px 3px #6302ff,
                0px 0px 5px #6302ff,
@@ -48,7 +58,20 @@ body {
                0px 0px 10px #6302ff,
                0px 0px 15px #6302ff,
                0px 0px 20px #6302ff,
-               0px 0px 30px #6200ff;
+               0px 0px 30px #6200ff; */
+               color: #fff;
+-webkit-animation: purpleNeon 2.5s ease-in-out infinite alternate;
+-moz-animation: purpleNeon 2.5s ease-in-out infinite alternate;
+animation: purpleNeon 2.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes purpleNeon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6200ff, 0 0 70px #6200ff, 0 0 80px #6200ff, 0 0 100px #6200ff, 0 0 150px #6200ff;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6200ff, 0 0 35px #6200ff, 0 0 40px #6200ff, 0 0 50px #6200ff, 0 0 75px #6200ff;
+  }
 }
               
 .flexbox-content {
@@ -72,9 +95,4 @@ body {
   position: fixed;
   bottom: 0vh;
   right: 5vw;
-}
-
-.clear-button {
-  background-color: transparent;
-  border: 0em;
 }
