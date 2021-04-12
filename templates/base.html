@@ -11,20 +11,9 @@
     <title>Kegerator App In Progress</title>
     {% block head %}{% endblock %}
 </head>
-<body style="visibility: hidden;">
+<body style="visibility: hidden;" onload="js_Load()">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
     {% block body %}{% endblock %}
-    <script>
-        let domReady = (cb) => {
-            document.readyState === 'interactive' || document.readyState === 'complete'
-            ? cb()
-            : document.addEventListener('DOMContentLoaded', cb);
-        };
-        
-        domReady(() => {
-            // Display body when DOM is loaded
-            document.body.style.visibility = 'visible';
-        });
-    </script>
+    <script>function js_Load() { document.body.style.visibility='visible'; }</script>
 </body>
 </html>
