@@ -1,6 +1,16 @@
 @font-face {
-  font-family: Harlow;
+  font-family: Harlow Solid Italic;
   src: url("/static/fonts/HARLOWSI.TTF");
+  font-weight: regular;
+}
+@font-face {
+  font-family: NEON;
+  src: url("/static/fonts/NEON.TTF");
+  font-weight: regular;
+}
+@font-face {
+  font-family: Neoneon;
+  src: url("/static/fonts/NEONEON.OTF");
   font-weight: regular;
 }
 
@@ -10,9 +20,7 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  /* FIXME */
-  font-family: "Harlow"; 
-  /* src: "{{ url_for('static', filename='/fonts/HARLOWSI.TTF') }}"; */
+  font-family: "Harlow Solid Italic"; 
 
   /* Location of the image */
   background-image: url("/static/img/brick_wall.png");
@@ -49,7 +57,7 @@ p {
   color: white;
 }
 
-.neonGlow {
+.neonGlowText {
   /* text-shadow: 0px 0px 1px #6302ff,
                0px 0px 2px #6302ff,
                0px 0px 3px #6302ff,

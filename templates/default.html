@@ -4,11 +4,47 @@
 {% block body %}
 <script type=text/javascript> $(function() { $("#spoutControl").mouseup(function (event) { $.getJSON('/endPour', { }, function(data) { }); window.location.reload(); }); }); </script>
 <script type=text/javascript> $(function() { $("#spoutControl").mousedown(function (event) { $.getJSON('/beginPour', { }, function(data) { }); return false; }); }); </script>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet"> -->
 
-  <div class="content">
+<svg xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:krita="http://krita.org/namespaces/svg/krita"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    width="245.76pt"
+    height="144pt"
+    viewBox="0 0 245.76 144">
+  <defs>
+    <filter id="neonGlowSVG" height="300%" width="300%" x="-75%" y="-75%">
+      <!-- Thicken out the original shape -->
+      <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+
+      <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+      <feGaussianBlur in="thicken" stdDeviation="10" result="blurred" />
+
+      <!-- Change the colour -->
+      <feFlood flood-color="#6200ff" result="glowColor" />
+
+      <!-- Color in the glows -->
+      <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+      <!--	Layer the effects together -->
+      <feMerge>
+        <feMergeNode in="softGlow_colored"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+</defs>
+<!-- <defs/> -->
+<text id="shape0" krita:useRichText="true" transform="matrix(1.0000000672 0 0 1 28.5761048751717 85.6255842905676)" fill="#ffffff" filter="url(#neonGlowSVG)" stroke="#000000" stroke-opacity="0" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" font-family="NEON" font-size="20" font-size-adjust="0.266667" font-stretch="normal" font-weight="700" letter-spacing="0" word-spacing="0"><tspan x="0">Craggs</tspan></text><text id="shape01" krita:useRichText="true" transform="matrix(1.0000000672 0 0 1 115.213867484298 101.307086463452)" fill="#ffffff" stroke="#000000" stroke-opacity="0" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" font-family="Harlow Solid Italic" font-size="6" font-size-adjust="0.2"><tspan x="0">&quot;Servin' dreams since 1982&quot;</tspan></text><text id="shape1" krita:useRichText="true" transform="matrix(1.0000000672 0 0 1 108.985495943921 79.1902967366378)" fill="#ffffff" stroke="#000000" stroke-opacity="0" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" font-family="Neoneon" font-size="14" font-size-adjust="0.722222" font-stretch="normal" letter-spacing="0" word-spacing="0"><tspan x="0">'</tspan></text><text id="shape01" krita:useRichText="true" transform="matrix(1.00000004092632 0 0 0.999999973726325 135.683892025796 85.7200335140524)" fill="#ffffff" stroke="#000000" stroke-opacity="0" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" font-family="NEON" font-size="20" font-size-adjust="0.266667" font-stretch="normal" font-weight="700" letter-spacing="0" word-spacing="0"><tspan x="0">lounge</tspan></text><path id="shape02" transform="matrix(0.999999978534234 0 0 0.999999978534234 134.640008104871 64.8603061718209)" fill="#00ffce" fill-rule="evenodd" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="1.91999995708466" d="M0 0L84.42 0"/><path id="shape03" transform="matrix(0.999999957068468 0 0 0.999999957068468 29.5712052166798 64.6037715967811)" fill="#00ffce" fill-rule="evenodd" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="1.91999995708466" d="M0 0L29.8695 0"/><path id="shape04" transform="matrix(0.999999978534234 0 0 0.999999978534234 29.4000009888407 90.3540681460162)" fill="#00ffce" fill-rule="evenodd" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="1.91999995708466" d="M0 0L189.36 0"/><path id="shape05" transform="matrix(0.999999994242466 0 0 0.999999994242466 72.9069341267211 40.9581991190143)" fill="#ffffff" fill-rule="evenodd" stroke="#ffffff" stroke-width="1.68" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="1.91999995708466" d="M48.3744 8.98982C43.1301 3.75964 34.9853 0.763034 23.9397 0C13.2831 0.66914 5.30319 3.66545 0 8.98893Z"/><path id="shape06" transform="matrix(0.999999967634531 0 0 0.999999967634531 69.0600023669394 54.3600006522494)" fill="#ffffff" fill-rule="evenodd" stroke="#ffffff" stroke-width="1.68" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="1.91999995708466" d="M55.92 1.2C55.5968 0.742102 55.3305 0.342102 55.1212 0L0.740263 0C0.491983 0.37032 0.245229 0.73032 0 1.08Z"/><path id="shape011" transform="matrix(0.999999961414656 0 0 0.999999961414656 66.8641189451486 59.2121593625154)" fill="#ffffff" fill-rule="evenodd" stroke="#ffffff" stroke-width="1.68" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="1.91999995708466" d="M60.6809 0.446587C60.6131 0.331732 60.5869 0.24546 60.4709 0.12784L0.275772 0C0.100203 0.154871 0.0708781 0.333454 0 0.509117Z"/><path id="shape02" transform="matrix(0.999999941161402 0 0 0.999999941161402 65.4150043694649 62.4720686090998)" fill="#ffffff" fill-rule="evenodd" stroke="#ffffff" stroke-width="0.96" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="1.91999995708466" d="M47.865 0.302932C53.2162 0.31714 58.3479 0.310109 63.6992 0.324316C63.6839 0.231819 63.5735 0.110491 63.525 0.0554337L45.7845 0L0 0.287934C0.037005 0.201301 -0.0222 0.182067 0.026168 0.11164C9.8237 0.137653 24.4749 0.200674 43.98 0.235431"/><path id="shape11" transform="matrix(0.999999994242466 0 0 0.999999994242466 64.630295802277 64.6578442121119)" fill="none" stroke="#ffffff" stroke-width="0.48" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" d="M0 0.0118616L43.3661 0M49.0088 -1.36002e-15L64.9228 0.0118616"/>
+</svg>
+			
+
+<!-- <image src="/static/img/craggs_lounge_with_sunset.svg" width=1000vw fill="white" filter="url(#neonGlowSVG)" /> -->
+<!-- </svg> -->
+<div class="content">
     <div class="flexbox-content">
       <div class="flexbox-sensors">
-        <p class="neonGlow">{{temp}} &degC<br>{{pints}} pints</p>
+        <p class="neonGlowText">{{temp}} &degC<br>{{pints}} pints</p>
       </div>
       <div class="flexbox-item-beerButton">
           <input type="image" src="/static/img/beer.svg" width=900vw id="spoutControl" alt="Push Button for Beer"/>
