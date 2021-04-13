@@ -49,6 +49,13 @@ p {
   transition: all 0.5s;
 }
 
+.mainLogoText{
+  /* width: 100vw; */
+  position: fixed;
+  bottom: 50%;
+  right: 50%;
+}
+
 .content {
   position: absolute;
   bottom:0vh;
@@ -57,20 +64,11 @@ p {
   color: white;
 }
 
-.neonGlowText {
-  /* text-shadow: 0px 0px 1px #6302ff,
-               0px 0px 2px #6302ff,
-               0px 0px 3px #6302ff,
-               0px 0px 5px #6302ff,
-               0px 0px 7px #6302ff,
-               0px 0px 10px #6302ff,
-               0px 0px 15px #6302ff,
-               0px 0px 20px #6302ff,
-               0px 0px 30px #6200ff; */
-               color: #fff;
--webkit-animation: purpleNeon 2.5s ease-in-out infinite alternate;
--moz-animation: purpleNeon 2.5s ease-in-out infinite alternate;
-animation: purpleNeon 2.5s ease-in-out infinite alternate;
+.neonGlowTextPurple {
+  color: #fff;
+  -webkit-animation: purpleNeon 2.5s ease-in-out infinite alternate;
+  -moz-animation: purpleNeon 2.5s ease-in-out infinite alternate;
+  animation: purpleNeon 2.5s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes purpleNeon {
@@ -79,6 +77,22 @@ animation: purpleNeon 2.5s ease-in-out infinite alternate;
   }
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6200ff, 0 0 35px #6200ff, 0 0 40px #6200ff, 0 0 50px #6200ff, 0 0 75px #6200ff;
+  }
+}
+
+.neonGlowTextPink {
+  color: #fff;
+  -webkit-animation: pinkNeon 2.5s ease-in-out infinite alternate;
+  -moz-animation: pinkNeon 2.5s ease-in-out infinite alternate;
+  animation: pinkNeon 2.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes pinkNeon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ea, 0 0 70px #ff00ea, 0 0 80px #ff00ea, 0 0 100px #ff00ea, 0 0 150px #ff00ea;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ea, 0 0 35px #ff00ea, 0 0 40px #ff00ea, 0 0 50px #ff00ea, 0 0 75px #ff00ea;
   }
 }
               
