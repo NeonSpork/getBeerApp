@@ -5,9 +5,10 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:krita="http://krita.org/namespaces/svg/krita"
     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-    width="245.76pt"
-    height="144pt"
-    viewBox="0 0 245.76 144">
+    height="100pt"
+    width="100pt"
+    viewbox="0 0 100% 100%">
 <defs/>
-<path id="shape0" transform="translate(218.370006921858, 111.690003292198)" fill="none" stroke="#ffffff" stroke-width="6.96" stroke-linecap="round" stroke-linejoin="round" d="M16.08 0L16.11 16.8089C16.11 19.2727 14.1127 21.27 11.6489 21.27L4.49108 21.27C2.02729 21.27 0.0299931 19.2727 0.0299931 16.8089L0 0"/><path id="shape0" transform="matrix(0.999999969267294 0 0 0.999999969267294 209.057774539457 116.211438816143)" fill="none" stroke="#ffffff" stroke-width="3.36" stroke-linecap="round" stroke-linejoin="round" d="M5.77223 10.6915L3.01535 10.6915C1.35002 10.6915 5.15344e-16 9.02444 7.19281e-16 6.96806L0 3.72339C2.03937e-16 1.66702 1.35002 3.18177e-16 3.01535 4.44089e-16L5.77223 0"/>
+<path id="shape0" class="neonGlowBoxPurple" transform="matrix(3 0 0 5 10 20)" fill="none" stroke="#ffffff" stroke-width="6.96" stroke-linecap="round" stroke-linejoin="round" d="M16.08 0L16.11 16.8089C16.11 19.2727 14.1127 21.27 11.6489 21.27L4.49108 21.27C2.02729 21.27 0.0299931 19.2727 0.0299931 16.8089L0 0"/>
+<path id="shape0" class="neonGlowBoxPurple" transform="matrix(5 0 0 5 10 40)" fill="none" stroke="#ffffff" stroke-width="3.36" stroke-linecap="round" stroke-linejoin="round" d="M5.77223 10.6915L3.01535 10.6915C1.35002 10.6915 5.15344e-16 9.02444 7.19281e-16 6.96806L0 3.72339C2.03937e-16 1.66702 1.35002 3.18177e-16 3.01535 4.44089e-16L5.77223 0"/>
 </svg>
