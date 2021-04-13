@@ -2,6 +2,8 @@ from flask import Flask, render_template, url_for
 import time
 
 app = Flask(__name__)
+# TODO add custom name - requires messing about with /etc/hosts and adding an alias
+# app.config['SERVER_NAME'] = 'getbeer:5000'
 
 @app.route('/getTemp')
 def getTemp():
@@ -44,4 +46,4 @@ def endPour():
     return render_template('default.html', temp = temp, pints = pints)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True)
