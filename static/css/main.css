@@ -49,11 +49,13 @@ p {
   transition: all 0.5s;
 }
 
-.mainLogoText{
-  /* width: 100vw; */
+.mainLogo{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  bottom: 50%;
-  right: 50%;
+  /* bottom: 50%;
+  right: 50%; */
 }
 
 .content {
