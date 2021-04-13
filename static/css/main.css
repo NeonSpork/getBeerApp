@@ -66,12 +66,10 @@ p {
 
 .neonGlowTextPurple {
   color: #fff;
-  -webkit-animation: purpleNeon 2.5s ease-in-out infinite alternate;
-  -moz-animation: purpleNeon 2.5s ease-in-out infinite alternate;
-  animation: purpleNeon 2.5s ease-in-out infinite alternate;
+  animation: purpleNeonText 2.5s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes purpleNeon {
+@keyframes purpleNeonText {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6200ff, 0 0 70px #6200ff, 0 0 80px #6200ff, 0 0 100px #6200ff, 0 0 150px #6200ff;
   }
@@ -82,17 +80,43 @@ p {
 
 .neonGlowTextPink {
   color: #fff;
-  -webkit-animation: pinkNeon 2.5s ease-in-out infinite alternate;
-  -moz-animation: pinkNeon 2.5s ease-in-out infinite alternate;
-  animation: pinkNeon 2.5s ease-in-out infinite alternate;
+  animation: pinkNeonText 2.5s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes pinkNeon {
+@keyframes pinkNeonText {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ea, 0 0 70px #ff00ea, 0 0 80px #ff00ea, 0 0 100px #ff00ea, 0 0 150px #ff00ea;
   }
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ea, 0 0 35px #ff00ea, 0 0 40px #ff00ea, 0 0 50px #ff00ea, 0 0 75px #ff00ea;
+  }
+}
+
+.neonGlowBoxPurple {
+  color: #fff;
+  animation: purpleNeon 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes purpleNeonBox {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6200ff, 0 0 70px #6200ff, 0 0 80px #6200ff, 0 0 100px #6200ff, 0 0 150px #6200ff;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6200ff, 0 0 35px #6200ff, 0 0 40px #6200ff, 0 0 50px #6200ff, 0 0 75px #6200ff;
+  }
+}
+
+.neonGlowBoxPink {
+  color: #fff;
+  animation: pinkNeonBox 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes pinkNeonBox {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ea, 0 0 70px #ff00ea, 0 0 80px #ff00ea, 0 0 100px #ff00ea, 0 0 150px #ff00ea;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ea, 0 0 35px #ff00ea, 0 0 40px #ff00ea, 0 0 50px #ff00ea, 0 0 75px #ff00ea;
   }
 }
               
