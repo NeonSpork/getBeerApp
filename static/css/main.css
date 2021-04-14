@@ -20,7 +20,7 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  font-family: "Pacifico"; 
+  font-family: "Harlow Solid Italic"; 
 
   /* Location of the image */
   background-image: url("/static/img/brick_wall.png");
@@ -59,104 +59,37 @@ svg {
 
 .neonGlowTextPurple {
   color: #fff;
-  /* text-shadow: 0px 0px 1px #6302ff,
-               0px 0px 2px #6302ff,
-               0px 0px 3px #6302ff,
+  text-shadow: 0px 0px 3px #6302ff,
                0px 0px 5px #6302ff,
                0px 0px 7px #6302ff,
                0px 0px 10px #6302ff,
                0px 0px 15px #6302ff,
-               0px 0px 20px #6302ff,
-               0px 0px 30px #6200ff; */
-  animation: purpleNeonText 2.5s ease-in-out infinite alternate;
+               0px 0px 30px #6200ff,
+               0px 0px 60px #6200ff,
+               0px 0px 150px #6200ff;
 }
-
-@keyframes purpleNeonText {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6200ff, 0 0 70px #6200ff, 0 0 80px #6200ff, 0 0 100px #6200ff, 0 0 150px #6200ff;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6200ff, 0 0 35px #6200ff, 0 0 40px #6200ff, 0 0 50px #6200ff, 0 0 75px #6200ff;
-  }
-}
-
-.neonGlowTextPink {
-  color: #fff;
-  animation: pinkNeonText 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes pinkNeonText {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ea, 0 0 70px #ff00ea, 0 0 80px #ff00ea, 0 0 100px #ff00ea, 0 0 150px #ff00ea;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ea, 0 0 35px #ff00ea, 0 0 40px #ff00ea, 0 0 50px #ff00ea, 0 0 75px #ff00ea;
-  }
-}
-
-.neonGlowBoxPurple {
-  color: #fff;
-  animation: purpleNeon 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes purpleNeonBox {
-  from {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6200ff, 0 0 70px #6200ff, 0 0 80px #6200ff, 0 0 100px #6200ff, 0 0 150px #6200ff;
-  }
-  to {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6200ff, 0 0 35px #6200ff, 0 0 40px #6200ff, 0 0 50px #6200ff, 0 0 75px #6200ff;
-  }
-}
-
-.neonGlowBoxPink {
-  color: #fff;
-  animation: pinkNeonBox 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes pinkNeonBox {
-  from {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ea, 0 0 70px #ff00ea, 0 0 80px #ff00ea, 0 0 100px #ff00ea, 0 0 150px #ff00ea;
-  }
-  to {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ea, 0 0 35px #ff00ea, 0 0 40px #ff00ea, 0 0 50px #ff00ea, 0 0 75px #ff00ea;
-  }
-}
-
 
 .content {
   position: fixed;
   bottom: 0;
-  /* height: 100vh; */
   width: 100vw;
-  /* font-size: 7.5vh; */
   color: white;
 }
 
 .flexbox-mainLogo{
-  border: 5px solid mediumvioletred;
   position: fixed;
-  /* justify-self: center;
-  align-self: center; */
   bottom: 2%;
   left: 2%;
   right: 2%;
   top: 2%;
-  /* height: 100vh;
-  width: 100vw; */
-  /* bottom: 50%;
-  right: 50%; */
 }
 
 .flexbox-content {
   display: flex;
-  /* flex-wrap: nowrap; */
   justify-content: space-between;
-  border: 5px solid mediumvioletred;
 }
 
 .flexbox-sensors {
-  border: 5px solid mediumvioletred;
-  /* margin: auto; */
   position: absolute;
   bottom: 0;
   left: 5vw;
@@ -166,10 +99,7 @@ svg {
 }
 
 .flexbox-item-beerButton {
-  border: 5px solid mediumvioletred;
-  /* margin: auto; */
   position: absolute;
-  /* align-self: flex-end; */
   bottom: 0vh;
   right: 5vw;
 }
