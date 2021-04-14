@@ -40,10 +40,8 @@ def beginPour():
 
 @app.route('/endPour', methods= ['GET'])
 def endPour():
-    temp = getTemp()
-    pints = getPints()
-    # return false
-    return render_template('default.html', temp = temp, pints = pints)
+    print('Ending pour...')
+    return 'nothing'
 
 if __name__ == '__main__':
     app.run(debug=True)
