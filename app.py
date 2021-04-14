@@ -1,10 +1,10 @@
 from flask import Flask, render_template, url_for
-import RPi.GPIO as GPIO
-from hx711 import HX711
-from w1thermsensor import W1ThermSensor
+import time
 
 app = Flask(__name__)
 
+# TODO add custom name - requires messing about with /etc/hosts and adding an alias
+# app.config['SERVER_NAME'] = 'getbeer:5000'
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.IN)  # Temp sensor DS18B20
@@ -23,7 +23,7 @@ def getTemp():
     try:
         temp = sensor.get_temperature()
     except Exception as e:
-        temp = e
+        temp = e.__name__
     return temp
 
 @app.route('/getPints')
@@ -58,5 +58,4 @@ def endPour():
     return 'nothing'
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
-    GPIO.cleanup()
+    app.run(debug=True)
