@@ -56,7 +56,6 @@ svg {
   padding: 0;
 }
 
-
 .neonGlowTextPurple {
   color: #fff;
   text-shadow: 0px 0px 3px #6302ff,
@@ -102,4 +101,76 @@ svg {
   position: absolute;
   bottom: 0vh;
   right: 2vw;
+}
+
+@keyframes hideBeerButton {
+  90% {opacity: 1;}
+  100% {opacity: 0;} 
+}
+
+@keyframes showSecretButton {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  90% {opacity: 0;}
+  100% {opacity: 1;} 
+}
+
+@keyframes changeToRed {
+  0% {text-shadow: 0px 0px 3px #6302ff,
+    0px 0px 5px #6302ff,
+    0px 0px 7px #6302ff,
+    0px 0px 10px #6302ff,
+    0px 0px 15px #6302ff,
+    0px 0px 30px #6200ff,
+    0px 0px 60px #6200ff,
+    0px 0px 150px #6200ff;}
+  90% {text-shadow: 0px 0px 3px #6302ff,
+    0px 0px 5px #6302ff,
+    0px 0px 7px #6302ff,
+    0px 0px 10px #6302ff,
+    0px 0px 15px #6302ff,
+    0px 0px 30px #6200ff,
+    0px 0px 60px #6200ff,
+    0px 0px 150px #6200ff;}
+  100% {text-shadow: 0px 0px 3px #ff0000,
+    0px 0px 5px #ff0000,
+    0px 0px 7px #ff0000,
+    0px 0px 10px #ff0000,
+    0px 0px 15px #ff0000,
+    0px 0px 30px #ff0000,
+    0px 0px 60px #ff0000,
+    0px 0px 150px #ff0000;}
+}
+
+#spoutControl_secret {
+  animation: hideBeerButton 4.5s ease-in forwards;
+}
+
+#crossBones {
+  position: fixed;
+  bottom: 0;
+  right: 2vw;
+  animation: showSecretButton 5.5s ease-in forwards;
+}
+
+#neonGlowText_secret {
+  animation: changeToRed 5.5s ease-in forwards;
+}
+
+#backArrow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: showSecretButton 5.5s ease-in forwards;
+}
+
+#hiddenButton {
+  position:absolute;
+  width: 20vw;
+  height: 15vh;
+  top: 15vh;
+  right: 25vw;
+  /* opacity: 0; */
 }

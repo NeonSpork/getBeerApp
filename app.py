@@ -47,15 +47,27 @@ def default():
 
 @app.route('/secret')
 def secret():
-    return render_template('secret.html')
+    temp = getTemp()
+    pints = getPints()
+    return render_template('secret.html', temp = temp, pints = pints)
 
 @app.route('/beginPour')
 def beginPour():
     GPIO.output(5, True)
     return 'nothing'
 
-@app.route('/endPour', methods= ['GET'])
+@app.route('/endPour')
 def endPour():
+    GPIO.output(5, False)
+    return 'nothing'
+
+@app.route('/beginPourSECRET')
+def beginPourSECRET():
+    GPIO.output(5, True)
+    return 'nothing'
+
+@app.route('/endPourSECRET')
+def endPourSECRET():
     GPIO.output(5, False)
     return 'nothing'
 
