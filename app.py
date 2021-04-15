@@ -45,5 +45,15 @@ def endPour():
     print('Ending pour...')
     return 'nothing'
 
+@app.route('/beginPourSECRET')
+def beginPourSECRET():
+    print('Starting SECRET pour...')
+    return 'nothing'
+
+@app.route('/endPourSECRET')
+def endPourSECRET():
+    print('Ending SECRET pour...')
+    return 'nothing'
+
 if __name__ == '__main__':
     app.run(debug=True)
