@@ -63,12 +63,12 @@ def endPour():
 
 @app.route('/beginPourSECRET')
 def beginPourSECRET():
-    GPIO.output(5, True)
+    GPIO.output(6, True)
     return 'nothing'
 
 @app.route('/endPourSECRET')
 def endPourSECRET():
-    GPIO.output(5, False)
+    GPIO.output(6, False)
     return 'nothing'
 
 if __name__ == '__main__':
