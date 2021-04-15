@@ -144,7 +144,7 @@ svg {
     0px 0px 150px #ff0000;}
 }
 
-#spoutControl {
+#spoutControl_secret {
   animation: hideBeerButton 4.5s ease-in forwards;
 }
 
@@ -157,4 +157,20 @@ svg {
 
 #neonGlowText_secret {
   animation: changeToRed 5.5s ease-in forwards;
+}
+
+#backArrow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: showSecretButton 5.5s ease-in forwards;
+}
+
+#hiddenButton {
+  position:absolute;
+  width: 20vw;
+  height: 15vh;
+  top: 15vh;
+  right: 25vw;
+  /* opacity: 0; */
 }
