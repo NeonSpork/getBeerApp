@@ -1,15 +1,29 @@
 from flask import Flask, render_template, url_for
-import time
+import RPi.GPIO as GPIO
+from hx711 import HX711
+from w1thermsensor import W1ThermSensor
 
 app = Flask(__name__)
+
 # TODO add custom name - requires messing about with /etc/hosts and adding an alias
 # app.config['SERVER_NAME'] = 'getbeer:5000'
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(4, GPIO.IN)  # Temp sensor DS18B20
+GPIO.setup(2, GPIO.IN)  # HX711 load sensor DT
+GPIO.setup(3, GPIO.IN)  # HX711 load sensor SDK
+GPIO.setup(5, GPIO.OUT, initial=0)  # Output pin to solenoid BEER valve
+#GPIO.setup(6, GPIO.OUT, initial=0)  # Output pin to solenoid VODKA valve
+
+hx = HX711(dout=2, pd_sck=3)
+hx.set_offset(8234508)  # This gets calibrated to zero the sensor
+hx.set_scale(-20.9993)
+sensor = W1ThermSensor()
 
 @app.route('/getTemp')
 def getTemp():
     try:
-        t = time.localtime()
-        temp = "{}:{}:{}".format(t.tm_hour, t.tm_min, t.tm_sec)
+        temp = sensor.get_temperature()
     except Exception as e:
         temp = e.__name__
     return temp
@@ -17,10 +31,12 @@ def getTemp():
 @app.route('/getPints')
 def getPints():
     try:
-        t = time.localtime()
-        pints = "{}:{}:{}".format(t.tm_hour, t.tm_min, t.tm_sec)
+        grams = hx.get_grams(times=1)
+        pints = int((grams - 4250)*0.5)  # dry weight of keg is ca. 4250g
+        if pints < 0:
+            pints = 0
     except Exception as e:
-        pints = e.__name__
+        pints = e
     return pints
 
 @app.route('/', methods= ['GET'])
@@ -37,23 +53,24 @@ def secret():
 
 @app.route('/beginPour')
 def beginPour():
-    print('Starting pour...')
+    GPIO.output(5, True)
     return 'nothing'
 
 @app.route('/endPour')
 def endPour():
-    print('Ending pour...')
+    GPIO.output(5, False)
     return 'nothing'
 
 @app.route('/beginPourSECRET')
 def beginPourSECRET():
-    print('Starting SECRET pour...')
+    GPIO.output(5, True)
     return 'nothing'
 
 @app.route('/endPourSECRET')
 def endPourSECRET():
-    print('Ending SECRET pour...')
+    GPIO.output(5, False)
     return 'nothing'
 
 if __name__ == '__main__':
     app.run(debug=True)
+    GPIO.cleanup()
