@@ -31,14 +31,16 @@ def default():
 
 @app.route('/secret')
 def secret():
-    return render_template('secret.html')
+    temp = getTemp()
+    pints = getPints()
+    return render_template('secret.html', temp = temp, pints = pints)
 
 @app.route('/beginPour')
 def beginPour():
     print('Starting pour...')
     return 'nothing'
 
-@app.route('/endPour', methods= ['GET'])
+@app.route('/endPour')
 def endPour():
     print('Ending pour...')
     return 'nothing'
