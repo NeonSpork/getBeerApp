@@ -217,6 +217,7 @@ svg {
   animation: showSecretButton 5.5s ease-in forwards;
 }
 
+/* TODO make this work
 @keyframes glitch {
   0%{clip:rect(89px,9999px,100px,0)}
   5%{clip:rect(4px,9999px,62px,0)}
@@ -241,8 +242,8 @@ svg {
   100%{clip:rect(92px,9999px,8px,0)}
 }
 
-#secret_content {
-  /* overflow: hidden;
-  clip: rect(0,900px,0,0); */
-  /* animation: glitch 2s infinite linear alternate-reverse; */
-}
+.glitch_graphic {
+  overflow: hidden;
+  clip: rect(0,900px,0,0);
+  animation: glitch 2s infinite linear alternate-reverse;
+} */
