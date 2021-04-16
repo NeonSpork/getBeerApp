@@ -8,7 +8,7 @@ d{% extends 'base.html' %}
   var secretCounter = 0;
   function checkSecretRedirect() {
     secretCounter += 1;
-    if (secretCounter >= 13) {
+    if (secretCounter >= 3) {
       window.location.href = "/secret";
     }
   }
