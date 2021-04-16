@@ -103,6 +103,66 @@ svg {
   right: 2vw;
 }
 
+@-webkit-keyframes hideBeerButton {
+  90% {opacity: 1;}
+  100% {opacity: 0;} 
+}
+
+@-webkit-keyframes showSecretButton {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  90% {opacity: 0;}
+  100% {opacity: 1;} 
+}
+
+@-webkit-keyframes changeToRed {
+  0% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  90% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
+}
+
+@-moz-keyframes hideBeerButton {
+  90% {opacity: 1;}
+  100% {opacity: 0;} 
+}
+
+@-moz-keyframes showSecretButton {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  90% {opacity: 0;}
+  100% {opacity: 1;} 
+}
+
+@-moz-keyframes changeToRed {
+  0% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  90% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
+}
+
+@-o-keyframes hideBeerButton {
+  90% {opacity: 1;}
+  100% {opacity: 0;} 
+}
+
+@-o-keyframes showSecretButton {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  90% {opacity: 0;}
+  100% {opacity: 1;} 
+}
+
+@-o-keyframes changeToRed {
+  0% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  90% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
+}
+
 @keyframes hideBeerButton {
   90% {opacity: 1;}
   100% {opacity: 0;} 
@@ -118,33 +178,15 @@ svg {
 }
 
 @keyframes changeToRed {
-  0% {text-shadow: 0px 0px 3px #6302ff,
-    0px 0px 5px #6302ff,
-    0px 0px 7px #6302ff,
-    0px 0px 10px #6302ff,
-    0px 0px 15px #6302ff,
-    0px 0px 30px #6200ff,
-    0px 0px 60px #6200ff,
-    0px 0px 150px #6200ff;}
-  90% {text-shadow: 0px 0px 3px #6302ff,
-    0px 0px 5px #6302ff,
-    0px 0px 7px #6302ff,
-    0px 0px 10px #6302ff,
-    0px 0px 15px #6302ff,
-    0px 0px 30px #6200ff,
-    0px 0px 60px #6200ff,
-    0px 0px 150px #6200ff;}
-  100% {text-shadow: 0px 0px 3px #ff0000,
-    0px 0px 5px #ff0000,
-    0px 0px 7px #ff0000,
-    0px 0px 10px #ff0000,
-    0px 0px 15px #ff0000,
-    0px 0px 30px #ff0000,
-    0px 0px 60px #ff0000,
-    0px 0px 150px #ff0000;}
+  0% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  90% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
 }
 
 #spoutControl_secret {
+  -webkit-animation: hideBeerButton 4.5s ease-in forwards;
+  -moz-animation: hideBeerButton 4.5s ease-in forwards;
+  -o-animation: hideBeerButton 4.5s ease-in forwards;
   animation: hideBeerButton 4.5s ease-in forwards;
 }
 
@@ -152,10 +194,16 @@ svg {
   position: fixed;
   bottom: 0;
   right: 2vw;
+  -webkit-animation: showSecretButton 5.5s ease-in forwards;
+  -moz-animation: showSecretButton 5.5s ease-in forwards;
+  -o-animation: showSecretButton 5.5s ease-in forwards;
   animation: showSecretButton 5.5s ease-in forwards;
 }
 
 #neonGlowText_secret {
+  -webkit-animation: changeToRed 5.5s ease-in forwards;
+  -moz-animation: changeToRed 5.5s ease-in forwards;
+  -o-animation: changeToRed 5.5s ease-in forwards;
   animation: changeToRed 5.5s ease-in forwards;
 }
 
@@ -163,14 +211,38 @@ svg {
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-animation: showSecretButton 5.5s ease-in forwards;
+  -moz-animation: showSecretButton 5.5s ease-in forwards;
+  -o-animation: showSecretButton 5.5s ease-in forwards;
   animation: showSecretButton 5.5s ease-in forwards;
 }
 
-#hiddenButton {
-  position:absolute;
-  width: 20vw;
-  height: 15vh;
-  top: 15vh;
-  right: 25vw;
-  /* opacity: 0; */
+@keyframes glitch {
+  0%{clip:rect(89px,9999px,100px,0)}
+  5%{clip:rect(4px,9999px,62px,0)}
+  10%{clip:rect(43px,9999px,16px,0)}
+  15%{clip:rect(2px,9999px,68px,0)}
+  20%{clip:rect(12px,9999px,6px,0)}
+  25%{clip:rect(89px,9999px,25px,0)}
+  30%{clip:rect(15px,9999px,38px,0)}
+  35%{clip:rect(57px,9999px,97px,0)}
+  40%{clip:rect(24px,9999px,72px,0)}
+  45%{clip:rect(81px,9999px,3px,0)}
+  50%{clip:rect(93px,9999px,26px,0)}
+  55%{clip:rect(68px,9999px,85px,0)}
+  60%{clip:rect(43px,9999px,28px,0)}
+  65%{clip:rect(44px,9999px,11px,0)}
+  70%{clip:rect(17px,9999px,33px,0)}
+  75%{clip:rect(74px,9999px,66px,0)}
+  80%{clip:rect(100px,9999px,4px,0)}
+  85%{clip:rect(92px,9999px,31px,0)}
+  90%{clip:rect(93px,9999px,98px,0)}
+  95%{clip:rect(23px,9999px,77px,0)}
+  100%{clip:rect(92px,9999px,8px,0)}
+}
+
+#secret_content {
+  /* overflow: hidden;
+  clip: rect(0,900px,0,0); */
+  /* animation: glitch 2s infinite linear alternate-reverse; */
 }
