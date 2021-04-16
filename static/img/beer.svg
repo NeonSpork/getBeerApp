@@ -22,6 +22,36 @@
       <feGaussianBlur stdDeviation="5.562" id="feGaussianBlur1173"/>
     </filter>
     <style type="text/css"><![CDATA[
+        @-webkit-keyframes flicker {
+            0%    { opacity: 1;   }
+            3%    { opacity: 0.4; }
+            6%    { opacity: 1;   }
+            7%    { opacity: 0.4; }
+            8%    { opacity: 1;   }
+            9%    { opacity: 0.4; }
+            10%   { opacity: 1;   }
+            100%  { opacity: 1;   }
+        }
+        @-moz-keyframes flicker {
+            0%    { opacity: 1;   }
+            3%    { opacity: 0.4; }
+            6%    { opacity: 1;   }
+            7%    { opacity: 0.4; }
+            8%    { opacity: 1;   }
+            9%    { opacity: 0.4; }
+            10%   { opacity: 1;   }
+            100%  { opacity: 1;   }
+        }
+        @-o-keyframes flicker {
+            0%    { opacity: 1;   }
+            3%    { opacity: 0.4; }
+            6%    { opacity: 1;   }
+            7%    { opacity: 0.4; }
+            8%    { opacity: 1;   }
+            9%    { opacity: 0.4; }
+            10%   { opacity: 1;   }
+            100%  { opacity: 1;   }
+        }
         @keyframes flicker {
             0%    { opacity: 1;   }
             3%    { opacity: 0.4; }
@@ -33,6 +63,9 @@
             100%  { opacity: 1;   }
         }
         #beer_fill_neon {
+            -webkit-animation: flicker 6.5s infinite 1.5s step-end;
+            -moz-animation: flicker 6.5s infinite 1.5s step-end;
+            -o-animation: flicker 6.5s infinite 1.5s step-end;
             animation: flicker 6.5s infinite 1.5s step-end;
         }
     ]]></style>
