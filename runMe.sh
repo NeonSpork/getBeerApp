@@ -16,7 +16,6 @@ sudo apt upgrade
 sudo apt install xdotool unclutter sed chromium
 
 # Install the files into the correct locations
-mv kiosk.sh /home/pi/kiosh.sh
 sudo mv kiosk.service /lib/systemd/system/kiosk.service
 
 # Enable the new kiosk service
