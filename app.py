@@ -58,22 +58,22 @@ def secret():
 
 @app.route('/beginPour')
 def beginPour():
-    GPIO.output(beerPin, True)
+    GPIO.output(beerPin, GPIO.HIGH)
     return 'nothing'
 
 @app.route('/endPour')
 def endPour():
-    GPIO.output(beerPin, False)
+    GPIO.output(beerPin, GPIO.LOW)
     return 'nothing'
 
 @app.route('/beginPourSECRET')
 def beginPourSECRET():
-    GPIO.output(secretPin, True)
+    GPIO.output(secretPin, GPIO.HIGH)
     return 'nothing'
 
 @app.route('/endPourSECRET')
 def endPourSECRET():
-    GPIO.output(secretPin, False)
+    GPIO.output(secretPin, GPIO.LOW)
     return 'nothing'
 
 if __name__ == '__main__':
