@@ -12,8 +12,10 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7, GPIO.IN)  # Temp sensor DS18B20
 GPIO.setup(3, GPIO.IN)  # HX711 load sensor DT
 GPIO.setup(5, GPIO.IN)  # HX711 load sensor SDK
-GPIO.setup(37, GPIO.OUT)  # Output pin to solenoid BEER valve
-GPIO.setup(38, GPIO.OUT)  # Output pin to solenoid VODKA valve
+beerPin = 37
+secretPin = 38
+GPIO.setup(beerPin, GPIO.OUT)  # Output pin to solenoid BEER valve
+GPIO.setup(secretPin, GPIO.OUT)  # Output pin to solenoid VODKA valve
 
 hx = HX711(dout=3, pd_sck=5)
 hx.set_offset(8234508)  # This gets calibrated to zero the sensor
@@ -53,22 +55,22 @@ def secret():
 
 @app.route('/beginPour')
 def beginPour():
-    GPIO.output(21, True)
+    GPIO.output(beerPin, True)
     return 'nothing'
 
 @app.route('/endPour')
 def endPour():
-    GPIO.output(21, False)
+    GPIO.output(beerPin, False)
     return 'nothing'
 
 @app.route('/beginPourSECRET')
 def beginPourSECRET():
-    GPIO.output(22, True)
+    GPIO.output(secretPin, True)
     return 'nothing'
 
 @app.route('/endPourSECRET')
 def endPourSECRET():
-    GPIO.output(22, False)
+    GPIO.output(secretPin, False)
     return 'nothing'
 
 if __name__ == '__main__':
