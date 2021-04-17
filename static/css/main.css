@@ -216,3 +216,71 @@ svg {
   -o-animation: showSecretButton 5.5s ease-in forwards;
   animation: showSecretButton 5.5s ease-in forwards;
 }
+
+#secret_content{
+  animation: glitch 3s step-end alternate-reverse infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(500px,0) skew(0deg);
+  }
+  1%,59%{
+    transform: translate(-40px,0) skew(-10deg);
+  }
+  5%,70%{
+    transform: translate(200px,200px) skew(-10deg);
+  }
+  4%,7%,60%,73%{
+    transform: translate(0px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+  65%{
+    transform: translate(0,0) skew(0deg);
+  }
+}
+
+#secret_content:before,
+#secret_content:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+#secret_content:before{
+  animation: glitchTop 3s step-end alternate-reverse infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(208px,-500px);
+  }
+  4%,60%{
+    transform: translate(-800px,80px);
+  }
+  62%{
+    transform: translate(103px,-100px) skew(-13deg); 
+  }
+}
+
+#secret_content:after{
+  animation: glitchBotom 3s step-end alternate-reverse infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-12px,0);
+  }
+  4%,60%{
+    transform: translate(-12px,0);
+  }
+  62%{
+    transform: translate(-220px,15px) skew(21deg); 
+  }
+}
