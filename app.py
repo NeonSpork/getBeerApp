@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for
-import ASUS.GPIO as GPIO
+import RPi.GPIO as GPIO
 from hx711 import HX711
 from w1thermsensor import W1ThermSensor
 
@@ -12,8 +12,8 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.IN)  # Temp sensor DS18B20
 GPIO.setup(2, GPIO.IN)  # HX711 load sensor DT
 GPIO.setup(3, GPIO.IN)  # HX711 load sensor SDK
-GPIO.setup(21, GPIO.OUT, initial=0)  # Output pin to solenoid BEER valve
-GPIO.setup(22, GPIO.OUT, initial=0)  # Output pin to solenoid VODKA valve
+GPIO.setup(21, GPIO.OUT)  # Output pin to solenoid BEER valve
+GPIO.setup(22, GPIO.OUT)  # Output pin to solenoid VODKA valve
 
 hx = HX711(dout=8, pd_sck=9)
 hx.set_offset(8234508)  # This gets calibrated to zero the sensor
