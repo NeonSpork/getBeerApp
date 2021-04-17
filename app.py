@@ -8,14 +8,14 @@ app = Flask(__name__)
 # TODO add custom name - requires messing about with /etc/hosts and adding an alias
 # app.config['SERVER_NAME'] = 'getbeer:5000'
 GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(4, GPIO.IN)  # Temp sensor DS18B20
-GPIO.setup(2, GPIO.IN)  # HX711 load sensor DT
-GPIO.setup(3, GPIO.IN)  # HX711 load sensor SDK
-GPIO.setup(21, GPIO.OUT)  # Output pin to solenoid BEER valve
-GPIO.setup(22, GPIO.OUT)  # Output pin to solenoid VODKA valve
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(7, GPIO.IN)  # Temp sensor DS18B20
+GPIO.setup(3, GPIO.IN)  # HX711 load sensor DT
+GPIO.setup(5, GPIO.IN)  # HX711 load sensor SDK
+GPIO.setup(37, GPIO.OUT)  # Output pin to solenoid BEER valve
+GPIO.setup(38, GPIO.OUT)  # Output pin to solenoid VODKA valve
 
-hx = HX711(dout=8, pd_sck=9)
+hx = HX711(dout=3, pd_sck=5)
 hx.set_offset(8234508)  # This gets calibrated to zero the sensor
 hx.set_scale(-20.9993)
 sensor = W1ThermSensor()
