@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
-# import RPi.GPIO as GPIO
-# from hx711 import HX711
-# from w1thermsensor import W1ThermSensor
+import RPi.GPIO as GPIO
+from hx711 import HX711
+from w1thermsensor import W1ThermSensor
 import time
 
 app = Flask(__name__)
