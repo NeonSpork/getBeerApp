@@ -194,10 +194,10 @@ svg {
   position: fixed;
   bottom: 0;
   right: 2vw;
-  -webkit-animation: showSecretButton 5.5s ease-in forwards;
-  -moz-animation: showSecretButton 5.5s ease-in forwards;
-  -o-animation: showSecretButton 5.5s ease-in forwards;
-  animation: showSecretButton 5.5s ease-in forwards;
+  -webkit-animation: showSecretButton 4.5s ease-in forwards;
+  -moz-animation: showSecretButton 4.5s ease-in forwards;
+  -o-animation: showSecretButton 4.5s ease-in forwards;
+  animation: showSecretButton 4.5s ease-in forwards;
 }
 
 #neonGlowText_secret {
