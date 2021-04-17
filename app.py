@@ -10,8 +10,8 @@ app = Flask(__name__)
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.IN)  # Temp sensor DS18B20
-GPIO.setup(8, GPIO.IN)  # HX711 load sensor DT
-GPIO.setup(9, GPIO.IN)  # HX711 load sensor SDK
+GPIO.setup(2, GPIO.IN)  # HX711 load sensor DT
+GPIO.setup(3, GPIO.IN)  # HX711 load sensor SDK
 GPIO.setup(21, GPIO.OUT, initial=0)  # Output pin to solenoid BEER valve
 GPIO.setup(22, GPIO.OUT, initial=0)  # Output pin to solenoid VODKA valve
 
