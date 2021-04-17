@@ -15,7 +15,7 @@ sudo apt upgrade
 # Ensure we have the tools we need to run as a kiosk
 sudo apt install xdotool unclutter sed chromium
 
-# Ensure that the correct python packages are installed
+# Ensure the necessary python packages are installed
 sudo python3 -m pip install -r requirements.txt
 
 # Install the files into the correct locations
