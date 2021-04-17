@@ -1,7 +1,8 @@
 from flask import Flask, render_template, url_for
-import RPi.GPIO as GPIO
-from hx711 import HX711
-from w1thermsensor import W1ThermSensor
+# import RPi.GPIO as GPIO
+# from hx711 import HX711
+# from w1thermsensor import W1ThermSensor
+import time
 
 app = Flask(__name__)
 
@@ -28,6 +29,7 @@ def getTemp():
         temp = sensor.get_temperature()
     except Exception as e:
         temp = e.__name__
+    temp = "{}".format(time.localtime().tm_sec)
     return temp
 
 @app.route('/getPints')
@@ -39,6 +41,7 @@ def getPints():
             pints = 0
     except Exception as e:
         pints = e
+    pints = "{}".format(time.localtime().tm_min)
     return pints
 
 @app.route('/', methods= ['GET'])
