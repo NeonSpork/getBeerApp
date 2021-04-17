@@ -29,7 +29,7 @@ def getTemp():
         temp = sensor.get_temperature()
     except Exception as e:
         temp = e.__name__
-    temp = "{}".format(time.localtime().tm_sec)
+    # temp = "{}".format(time.localtime().tm_sec)
     return temp
 
 @app.route('/getPints')
@@ -41,7 +41,7 @@ def getPints():
             pints = 0
     except Exception as e:
         pints = e
-    pints = "{}".format(time.localtime().tm_min)
+    # pints = "{}".format(time.localtime().tm_min)
     return pints
 
 @app.route('/', methods= ['GET'])
