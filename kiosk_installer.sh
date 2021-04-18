@@ -51,7 +51,7 @@ fi
 cat > /home/linaro/.config/openbox/autostart << EOF
 #!/bin/bash
 unclutter -idle 0.1 -grab -root &
-&sudo python3 /home/linaro/getBeerApp/app.py
+&sudo python3 /home/linaro/getBeerApp/app.py &
 while :
 do
   chromium \
