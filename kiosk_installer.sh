@@ -14,16 +14,16 @@ apt-get install \
     -y
 
 # dir
-mkdir -p /home/kiosk/.config/openbox
+mkdir -p /home/linaro/.config/openbox
 
-# create group
-groupadd kiosk
+# # create group
+# groupadd kiosk
 
-# create user if not exists
-id -u kiosk &>/dev/null || useradd -m kiosk -g kiosk -s /bin/bash 
+# # create user if not exists
+# id -u kiosk &>/dev/null || useradd -m kiosk -g kiosk -s /bin/bash 
 
-# rights
-chown -R kiosk:kiosk /home/kiosk
+# # rights
+# chown -R kiosk:kiosk /home/kiosk
 
 # remove virtual consoles
 if [ -e "/etc/X11/xorg.conf" ]; then
@@ -41,17 +41,17 @@ if [ -e "/etc/lightdm/lightdm.conf" ]; then
 fi
 cat > /etc/lightdm/lightdm.conf << EOF
 [SeatDefaults]
-autologin-user=kiosk
+autologin-user=linaro
 EOF
 
 # create autostart
-if [ -e "/home/kiosk/.config/openbox/autostart" ]; then
-  mv /home/kiosk/.config/openbox/autostart /home/kiosk/.config/openbox/autostart.backup
+if [ -e "/home/linaro/.config/openbox/autostart" ]; then
+  mv /home/linaro/.config/openbox/autostart /home/linaro/.config/openbox/autostart.backup
 fi
-cat > /home/kiosk/.config/openbox/autostart << EOF
+cat > /home/linaro/.config/openbox/autostart << EOF
 #!/bin/bash
 unclutter -idle 0.1 -grab -root &
-&sudo python3 ~/getBeerApp/app.py
+&sudo python3 /home/linaro/getBeerApp/app.py
 while :
 do
   chromium \
