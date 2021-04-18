@@ -11,7 +11,8 @@ apt-get install \
     openbox \
     lightdm \
     locales \
-    -y
+    -y \
+    --allow-change-held-packages
 
 # dir
 mkdir -p /home/linaro/.config/openbox
