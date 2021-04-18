@@ -16,13 +16,13 @@ sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/getbeer/.config/chr
 # Run Chromium and open tabs
 /usr/bin/chromium-browser --window-size=1024,600 --kiosk --window-position=0,0 localhost:5000/ &
 
-# Start the kiosk loop. This keystroke changes the Chromium tab
-# To have just anti-idle, use this line instead:
-# xdotool keydown ctrl; xdotool keyup ctrl;
-# Otherwise, the ctrl+Tab is designed to switch tabs in Chrome
-# #
-while (true)
-  do
-    xdotool keydown ctrl; xdotool keyup ctrl;
-    sleep 15
-done
+# # Start the kiosk loop. This keystroke changes the Chromium tab
+# # To have just anti-idle, use this line instead:
+# # xdotool keydown ctrl; xdotool keyup ctrl;
+# # Otherwise, the ctrl+Tab is designed to switch tabs in Chrome
+# # #
+# while (true)
+#   do
+#     xdotool keydown ctrl; xdotool keyup ctrl;
+#     sleep 15
+# done
