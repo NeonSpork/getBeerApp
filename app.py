@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask, render_template, url_for
 import ASUS.GPIO as GPIO
 from hx711 import HX711
