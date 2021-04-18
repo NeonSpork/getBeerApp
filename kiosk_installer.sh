@@ -58,7 +58,7 @@ do
     --no-first-run \
     --start-maximized \
     --window-position=0,0 \
-    --window-size=1024,768 \
+    --window-size=1024,600 \
     --disable \
     --disable-translate \
     --disable-infobars \
