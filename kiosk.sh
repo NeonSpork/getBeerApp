@@ -10,4 +10,4 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/Defa
 sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
 
 python3 app.py &
-/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://localhost:5000
+/usr/bin/chromium --noerrdialogs --disable-infobars --kiosk http://localhost:5000
