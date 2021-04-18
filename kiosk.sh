@@ -11,7 +11,7 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/getbeer/.config/c
 sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/getbeer/.config/chromium/Default/Preferences
 
 # Start flask server
-/home/getbeer/getBeerApp/app.py
+/home/getbeer/getBeerApp/app.py &
 
 # Run Chromium and open tabs
 /usr/bin/chromium-browser --window-size=1024,600 --kiosk --window-position=0,0 localhost:5000/ &
