@@ -19,10 +19,20 @@ secretPin = 38
 GPIO.setup(beerPin, GPIO.OUT)  # Output pin to solenoid BEER valve
 GPIO.setup(secretPin, GPIO.OUT)  # Output pin to solenoid VODKA valve
 
-hx = HX711(dout=3, pd_sck=5)
-hx.set_offset(8234508)  # This gets calibrated to zero the sensor
-hx.set_scale(-20.9993)
-sensor = W1ThermSensor()
+try:
+    hx = HX711(dout=3, pd_sck=5)
+    hx.set_offset(8234508)  # This gets calibrated to zero the sensor
+    hx.set_scale(-20.9993)
+except:
+    class hx():
+        def get_grams(times=1):
+            return "n/a"
+try:
+    sensor = W1ThermSensor()
+except:
+    class sensor():
+        def get_temperature():
+            return "n/a"
 
 @app.route('/getTemp')
 def getTemp():
