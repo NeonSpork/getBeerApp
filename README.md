@@ -22,7 +22,7 @@ Follow the configuration steps to initialize and set up the DietPi, including wi
 * 17 - Git Client
 
 #### !!!!! KNOWN ISSUES !!!!!
-Currently 1wire is not set up by default on DietPi for **TinkerBoard** and getting it work correctly is WIP.  
+Currently 1wire is not set up by default on DietPi for **TinkerBoard** and getting it work correctly is WIP. Recommended solution is to use RPi 3b or newer.  
 If temperature is essential, use an RPi as in all likelyhood the performance will be similar. (1wire is essential in order to use the DS18B20 temperature sensor, and the setup is much less of a hassle on RPi)
 
 ### Setting up getBeerApp

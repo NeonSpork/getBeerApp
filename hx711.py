@@ -20,7 +20,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 """
 
 
-import ASUS.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 import sys
 
