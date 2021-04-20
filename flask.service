@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask app service for autostarting getBeerApp on localhost
+Wants=default.target
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/root/getBeerApp/app.py
+Restart=on-abort
+
+[Install]
+WantedBy=default.target
