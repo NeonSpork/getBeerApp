@@ -1,7 +1,6 @@
 # getBeerApp
 
 ![Neon light graphic](./static/img/craggs_lounge.svg)
-<img src="./static/img/craggs_lounge.svg">
 
 ### Overview
 
