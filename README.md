@@ -1,5 +1,8 @@
 # getBeerApp
 
+![Neon light graphic](./static/img/craggs_lounge.svg)
+<img src="./static/img/craggs_lounge.svg">
+
 ### Overview
 
 This is a simple app that serves up a web interface for a custom built kegerator, built with Python3 and Flask.
