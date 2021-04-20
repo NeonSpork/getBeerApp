@@ -20,7 +20,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 """
 
 
-import RPi.GPIO as GPIO
+import ASUS.GPIO as GPIO
 import time
 import sys
 
@@ -39,7 +39,7 @@ class HX711:
         self.SCALE = 1
 
         # Setup the gpio pin numbering system
-        GPIO.setmode(GPIO.BCM)
+        GPIO.setmode(GPIO.BOARD)
 
         # Set the pin numbers
         self.PD_SCK = pd_sck
@@ -60,11 +60,11 @@ class HX711:
     def set_gain(self, gain=128):
 
         try:
-            if gain is 128:
+            if gain == 128:
                 self.GAIN = 3
-            elif gain is 64:
+            elif gain == 64:
                 self.GAIN = 2
-            elif gain is 32:
+            elif gain == 32:
                 self.GAIN = 1
         except:
             self.GAIN = 3  # Sets default GAIN at 128
