@@ -98,27 +98,11 @@ svg {
   right: 2vw;
 }
 
-@keyframes hideBeerButton {
-  90% {opacity: 1;}
-  100% {opacity: 0;} 
-}
-
-@keyframes showSecretButton {
-  0% {
-    opacity: 0;
-    visibility: visible;
-  }
-  90% {opacity: 0;}
-  100% {opacity: 1;} 
-}
-
-@keyframes changeToRed {
-  0% {text-shadow: 0px 0px 3px, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
-  50% {text-shadow: 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px;}
-  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
-}
 
 #spoutControl_secret {
+  -webkit-animation: hideBeerButton 4s step-end forwards;
+  -moz-animation: hideBeerButton 4s step-end forwards;
+  -o-animation: hideBeerButton 4s step-end forwards;
   animation: hideBeerButton 4s step-end forwards;
 }
 
@@ -126,10 +110,16 @@ svg {
   position: fixed;
   bottom: 0;
   right: 2vw;
+  -webkit-animation: showSecretButton 4s step-end forwards;
+  -moz-animation: showSecretButton 4s step-end forwards;
+  -o-animation: showSecretButton 4s step-end forwards;
   animation: showSecretButton 4s step-end forwards;
 }
 
 #neonGlowText_secret {
+  -webkit-animation: changeToRed 4s step-end forwards;
+  -moz-animation: changeToRed 4s step-end forwards;
+  -o-animation: changeToRed 4s step-end forwards;
   animation: changeToRed 4s step-end forwards;
 }
 
@@ -137,22 +127,61 @@ svg {
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-animation: showSecretButton 4s step-end forwards;
+  -moz-animation: showSecretButton 4s step-end forwards;
+  -o-animation: showSecretButton 4s step-end forwards;
   animation: showSecretButton 4s step-end forwards;
 }
 
+.flickering_secret {
+  -webkit-animation: flicker_secret 4s step-end forwards;
+  -moz-animation: flicker_secret 4s step-end forwards;
+  -o-animation: flicker_secret 4s step-end forwards;
+  animation: flicker_secret 4s step-end forwards;
+}
+
 #secret_content{
+  -webkit-animation: glitch 3s step-end alternate-reverse infinite;
+  -moz-animation: glitch 3s step-end alternate-reverse infinite;
+  -o-animation: glitch 3s step-end alternate-reverse infinite;
   animation: glitch 3s step-end alternate-reverse infinite;
 }
 
-@keyframes glitch{
-  2%,64%{
-    transform: translate(5vw,0) skew(0deg);
+#secret_content:before,
+#secret_content:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+#secret_content:before{
+  -webkit-animation: glitchTop 3s step-end alternate-reverse infinite;
+  -moz-animation: glitchTop 3s step-end alternate-reverse infinite;
+  -o-animation: glitchTop 3s step-end alternate-reverse infinite;
+  animation: glitchTop 3s step-end alternate-reverse infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  -moz-clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  -o-clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+#secret_content:after{
+  -webkit-animation: glitchBottom 3s step-end alternate-reverse infinite;
+  -moz-animation: glitchBottom 3s step-end alternate-reverse infinite;
+  -o-animation: glitchBottom 3s step-end alternate-reverse infinite;
+  animation: glitchBottom 3s step-end alternate-reverse infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@-webkit-keyframes glitch{
+  2%,64%{ transform: translate(5px,0) skew(0deg);
   }
   1%,59%{
-    transform: translate(-4vw,0) skew(-10deg);
+    transform: translate(-14px,0) skew(-10deg);
   }
   5%,70%{
-    transform: translate(-2vw,-2vh) skew(-10deg);
+    transform: translate(-20px,-20px) skew(-10deg);
   }
   4%,7%,60%,73%{
     transform: translate(0,0) skew(0deg);
@@ -165,46 +194,266 @@ svg {
   }
 }
 
-#secret_content:before,
-#secret_content:after{
-  content: attr(title);
-  position: absolute;
-  left: 0;
+@-moz-keyframes glitch{
+  2%,64%{ transform: translate(5px,0) skew(0deg);
+  }
+  1%,59%{
+    transform: translate(-14px,0) skew(-10deg);
+  }
+  5%,70%{
+    transform: translate(-20px,-20px) skew(-10deg);
+  }
+  4%,7%,60%,73%{
+    transform: translate(0,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+  65%{
+    transform: translate(0,0) skew(0deg);
+  }
 }
 
-#secret_content:before{
-  animation: glitchTop 3s step-end alternate-reverse infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+@-o-keyframes glitch{
+  2%,64%{ transform: translate(5px,0) skew(0deg);
+  }
+  1%,59%{
+    transform: translate(-14px,0) skew(-10deg);
+  }
+  5%,70%{
+    transform: translate(-20px,-20px) skew(-10deg);
+  }
+  4%,7%,60%,73%{
+    transform: translate(0,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+  65%{
+    transform: translate(0,0) skew(0deg);
+  }
+}
+
+@keyframes glitch{
+  2%,64%{ transform: translate(5px,0) skew(0deg);
+  }
+  1%,59%{
+    transform: translate(-14px,0) skew(-10deg);
+  }
+  5%,70%{
+    transform: translate(-20px,-20px) skew(-10deg);
+  }
+  4%,7%,60%,73%{
+    transform: translate(0,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+  65%{
+    transform: translate(0,0) skew(0deg);
+  }
+}
+
+@-webkit-keyframes glitchTop{
+  2%,64%{
+    transform: translate(20px,-50px);
+  }
+  4%,60%{
+    transform: translate(45px,8vh);
+  }
+  62%{
+    transform: translate(10px,-40px) skew(-13deg); 
+  }
+}
+
+@-moz-keyframes glitchTop{
+  2%,64%{
+    transform: translate(20px,-50px);
+  }
+  4%,60%{
+    transform: translate(45px,8vh);
+  }
+  62%{
+    transform: translate(10px,-40px) skew(-13deg); 
+  }
+}
+
+@-o-keyframes glitchTop{
+  2%,64%{
+    transform: translate(20px,-50px);
+  }
+  4%,60%{
+    transform: translate(45px,8vh);
+  }
+  62%{
+    transform: translate(10px,-40px) skew(-13deg); 
+  }
 }
 
 @keyframes glitchTop{
   2%,64%{
-    transform: translate(20vw,-50vh);
+    transform: translate(20px,-50px);
   }
   4%,60%{
-    transform: translate(45vw,8vh);
+    transform: translate(45px,8vh);
   }
   62%{
-    transform: translate(10vw,-10vh) skew(-13deg); 
+    transform: translate(10px,-40px) skew(-13deg); 
   }
 }
 
-#secret_content:after{
-  animation: glitchBottom 3s step-end alternate-reverse infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+@-webkit-keyframes glitchBottom{
+  2%,64%{
+    transform: translate(-10px,0);
+  }
+  4%,60%{
+    transform: translate(15px,0);
+  }
+  62%{
+    transform: translate(-22px,15px) skew(21deg);
+  }
+}
+
+@-moz-keyframes glitchBottom{
+  2%,64%{
+    transform: translate(-10px,0);
+  }
+  4%,60%{
+    transform: translate(15px,0);
+  }
+  62%{
+    transform: translate(-22px,15px) skew(21deg);
+  }
+}
+
+@-o-keyframes glitchBottom{
+  2%,64%{
+    transform: translate(-10px,0);
+  }
+  4%,60%{
+    transform: translate(15px,0);
+  }
+  62%{
+    transform: translate(-22px,15px) skew(21deg);
+  }
 }
 
 @keyframes glitchBottom{
   2%,64%{
-    transform: translate(-1vw,0);
+    transform: translate(-10px,0);
   }
   4%,60%{
-    transform: translate(-1vw,0);
+    transform: translate(15px,0);
   }
   62%{
-    transform: translate(-22vw,1.5vh) skew(21deg);
+    transform: translate(-22px,15px) skew(21deg);
+  }
+}
+
+@-webkit-keyframes hideBeerButton {
+  90% {opacity: 1;}
+  100% {opacity: 0;} 
+}
+
+@-moz-keyframes hideBeerButton {
+  90% {opacity: 1;}
+  100% {opacity: 0;} 
+}
+
+@-o-keyframes hideBeerButton {
+  90% {opacity: 1;}
+  100% {opacity: 0;} 
+}
+
+@keyframes hideBeerButton {
+  90% {opacity: 1;}
+  100% {opacity: 0;} 
+}
+
+@-webkit-keyframes showSecretButton {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  90% {opacity: 0;}
+  100% {opacity: 1;} 
+}
+
+@-moz-keyframes showSecretButton {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  90% {opacity: 0;}
+  100% {opacity: 1;} 
+}
+
+@-o-keyframes showSecretButton {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  90% {opacity: 0;}
+  100% {opacity: 1;} 
+}
+
+@keyframes showSecretButton {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  90% {opacity: 0;}
+  100% {opacity: 1;} 
+}
+
+@-webkit-keyframes changeToRed {
+  0% {text-shadow: 0px 0px 3px, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  50% {text-shadow: 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px;}
+  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
+}
+
+@-moz-keyframes changeToRed {
+  0% {text-shadow: 0px 0px 3px, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  50% {text-shadow: 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px;}
+  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
+}
+
+@-o-keyframes changeToRed {
+  0% {text-shadow: 0px 0px 3px, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  50% {text-shadow: 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px;}
+  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
+}
+
+@keyframes changeToRed {
+  0% {text-shadow: 0px 0px 3px, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  50% {text-shadow: 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px;}
+  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
+}
+
+@-webkit-keyframes flicker_secret {
+  0%,to{
+    opacity:1
+  }
+  20%{
+    opacity:.2
+  }
+}
+
+@-moz-keyframes flicker_secret {
+  0%,to{
+    opacity:1
+  }
+  20%{
+    opacity:.2
+  }
+}
+
+@-o-keyframes flicker_secret {
+  0%,to{
+    opacity:1
+  }
+  20%{
+    opacity:.2
   }
 }
 
@@ -215,8 +464,4 @@ svg {
   20%{
     opacity:.2
   }
-}
-
-.flickering_secret {
-  animation: flicker_secret 4s step-end forwards;
 }
