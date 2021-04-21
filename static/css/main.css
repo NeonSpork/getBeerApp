@@ -98,66 +98,6 @@ svg {
   right: 2vw;
 }
 
-@-webkit-keyframes hideBeerButton {
-  90% {opacity: 1;}
-  100% {opacity: 0;} 
-}
-
-@-webkit-keyframes showSecretButton {
-  0% {
-    opacity: 0;
-    visibility: visible;
-  }
-  90% {opacity: 0;}
-  100% {opacity: 1;} 
-}
-
-@-webkit-keyframes changeToRed {
-  0% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
-  90% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
-  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
-}
-
-@-moz-keyframes hideBeerButton {
-  90% {opacity: 1;}
-  100% {opacity: 0;} 
-}
-
-@-moz-keyframes showSecretButton {
-  0% {
-    opacity: 0;
-    visibility: visible;
-  }
-  90% {opacity: 0;}
-  100% {opacity: 1;} 
-}
-
-@-moz-keyframes changeToRed {
-  0% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
-  90% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
-  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
-}
-
-@-o-keyframes hideBeerButton {
-  90% {opacity: 1;}
-  100% {opacity: 0;} 
-}
-
-@-o-keyframes showSecretButton {
-  0% {
-    opacity: 0;
-    visibility: visible;
-  }
-  90% {opacity: 0;}
-  100% {opacity: 1;} 
-}
-
-@-o-keyframes changeToRed {
-  0% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
-  90% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
-  100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
-}
-
 @keyframes hideBeerButton {
   90% {opacity: 1;}
   100% {opacity: 0;} 
@@ -173,43 +113,31 @@ svg {
 }
 
 @keyframes changeToRed {
-  0% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
-  90% {text-shadow: 0px 0px 3px #6302ff, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  0% {text-shadow: 0px 0px 3px, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
+  50% {text-shadow: 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px;}
   100% {text-shadow: 0px 0px 3px #ff0000, 0px 0px 5px #ff0000, 0px 0px 7px #ff0000, 0px 0px 10px #ff0000, 0px 0px 15px #ff0000, 0px 0px 30px #ff0000, 0px 0px 60px #ff0000, 0px 0px 150px #ff0000;}
 }
 
 #spoutControl_secret {
-  -webkit-animation: hideBeerButton 4.5s ease-in forwards;
-  -moz-animation: hideBeerButton 4.5s ease-in forwards;
-  -o-animation: hideBeerButton 4.5s ease-in forwards;
-  animation: hideBeerButton 4.5s ease-in forwards;
+  animation: hideBeerButton 4s step-end forwards;
 }
 
 #crossBones {
   position: fixed;
   bottom: 0;
   right: 2vw;
-  -webkit-animation: showSecretButton 4.5s ease-in forwards;
-  -moz-animation: showSecretButton 4.5s ease-in forwards;
-  -o-animation: showSecretButton 4.5s ease-in forwards;
-  animation: showSecretButton 4.5s ease-in forwards;
+  animation: showSecretButton 4s step-end forwards;
 }
 
 #neonGlowText_secret {
-  -webkit-animation: changeToRed 5.5s ease-in forwards;
-  -moz-animation: changeToRed 5.5s ease-in forwards;
-  -o-animation: changeToRed 5.5s ease-in forwards;
-  animation: changeToRed 5.5s ease-in forwards;
+  animation: changeToRed 4s step-end forwards;
 }
 
 #backArrow {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-animation: showSecretButton 5.5s ease-in forwards;
-  -moz-animation: showSecretButton 5.5s ease-in forwards;
-  -o-animation: showSecretButton 5.5s ease-in forwards;
-  animation: showSecretButton 5.5s ease-in forwards;
+  animation: showSecretButton 4s step-end forwards;
 }
 
 #secret_content{
@@ -218,16 +146,16 @@ svg {
 
 @keyframes glitch{
   2%,64%{
-    transform: translate(500px,0) skew(0deg);
+    transform: translate(5vw,0) skew(0deg);
   }
   1%,59%{
-    transform: translate(-40px,0) skew(-10deg);
+    transform: translate(-4vw,0) skew(-10deg);
   }
   5%,70%{
-    transform: translate(200px,200px) skew(-10deg);
+    transform: translate(-2vw,-2vh) skew(-10deg);
   }
   4%,7%,60%,73%{
-    transform: translate(0px,0) skew(0deg);
+    transform: translate(0,0) skew(0deg);
   }
   62%{
     transform: translate(0,0) skew(5deg); 
@@ -252,30 +180,43 @@ svg {
 
 @keyframes glitchTop{
   2%,64%{
-    transform: translate(208px,-500px);
+    transform: translate(20vw,-50vh);
   }
   4%,60%{
-    transform: translate(-800px,80px);
+    transform: translate(45vw,8vh);
   }
   62%{
-    transform: translate(103px,-100px) skew(-13deg); 
+    transform: translate(10vw,-10vh) skew(-13deg); 
   }
 }
 
 #secret_content:after{
-  animation: glitchBotom 3s step-end alternate-reverse infinite;
+  animation: glitchBottom 3s step-end alternate-reverse infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
-@keyframes glitchBotom{
+@keyframes glitchBottom{
   2%,64%{
-    transform: translate(-12px,0);
+    transform: translate(-1vw,0);
   }
   4%,60%{
-    transform: translate(-12px,0);
+    transform: translate(-1vw,0);
   }
   62%{
-    transform: translate(-220px,15px) skew(21deg); 
+    transform: translate(-22vw,1.5vh) skew(21deg);
   }
+}
+
+@keyframes flicker_secret {
+  0%,to{
+    opacity:1
+  }
+  50%{
+    opacity:.2
+  }
+}
+
+.flickering_secret {
+  animation: flicker_secret 4s step-end forwards;
 }
