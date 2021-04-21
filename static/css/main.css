@@ -172,6 +172,8 @@ svg {
   animation: glitchBottom 3s step-end alternate-reverse infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -moz-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -o-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
 @-webkit-keyframes glitch{
