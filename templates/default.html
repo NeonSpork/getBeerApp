@@ -17,7 +17,6 @@ d{% extends 'base.html' %}
 <div class="content">
   <div class="flexbox-mainLogo">
     <image src="/static/img/craggs_lounge.svg" onclick="checkSecretRedirect()" style="max-width:100%; max-height:100%; width:100%;" alt="Invisible button">
-    <!-- <input type="button" id="hiddenButton"> -->
   </div>
   <div class="flexbox-content">
     <div class="flexbox-sensors">
@@ -31,7 +30,6 @@ d{% extends 'base.html' %}
 
 <script>
     window.setInterval('refresh()', 60000);
-    // Refresh page every 60 sec.
     function refresh() {
         window.location.reload();
     }
