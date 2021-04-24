@@ -49,9 +49,13 @@ except:
 @app.route('/getTemp')
 def getTemp():
     try:
-        temp = "{:.1f}".format(sensor.get_temperature())
-    except Exception as e:
-        temp = e
+        tempRead = sensor.get_temperature()
+        if tempRead.type() == float:
+            temp = "{:.1f}".format(tempRead)
+        else:
+            temp = "n/a"
+    except:
+        temp = "n/a"
     return temp
 
 @app.route('/getPints')
@@ -61,9 +65,9 @@ def getPints():
         pints = int((grams - 4250)*0.002)  # dry weight of keg is ca. 4250g
         if pints < 0:
             pints = 0
+        return pints
     except:
-        pints = "n/a"
-    return pints
+        return "n/a"
 
 @app.route('/', methods= ['GET'])
 def default():
