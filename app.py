@@ -6,12 +6,12 @@ try:
     from w1thermsensor import W1ThermSensor
 except:
     print("No compatible SBC detected!")
-    print("ASUS.GPIO, hx711, w1thermsensor are NOT imported.")
+    print("GPIO, hx711, w1thermsensor are NOT imported.")
 
 app = Flask(__name__)
 
 # TODO add custom name - requires messing about with /etc/hosts and adding an alias
-app.config['SERVER_NAME'] = 'getbeer:5000'
+# app.config['SERVER_NAME'] = 'getbeer:5000'
 beerPin = 37
 secretPin = 38
 try:
@@ -49,7 +49,7 @@ except:
 @app.route('/getTemp')
 def getTemp():
     try:
-        temp = sensor.get_temperature()
+        temp = "{:.1f}".format(sensor.get_temperature())
     except Exception as e:
         temp = e
     return temp
