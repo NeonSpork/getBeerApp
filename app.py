@@ -11,7 +11,7 @@ except:
 app = Flask(__name__)
 
 # TODO add custom name - requires messing about with /etc/hosts and adding an alias
-# app.config['SERVER_NAME'] = 'getbeer:5000'
+app.config['SERVER_NAME'] = 'getbeer:5000'
 beerPin = 37
 secretPin = 38
 try:
@@ -58,7 +58,7 @@ def getTemp():
 def getPints():
     try:
         grams = hx.get_grams(times=1)
-        pints = int((grams - 4250)*0.5)  # dry weight of keg is ca. 4250g
+        pints = int((grams - 4250)*0.002)  # dry weight of keg is ca. 4250g
         if pints < 0:
             pints = 0
     except:
