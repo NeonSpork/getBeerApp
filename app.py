@@ -50,10 +50,7 @@ except:
 def getTemp():
     try:
         tempRead = sensor.get_temperature()
-        if tempRead.type() == float:
-            temp = "{:.1f}".format(tempRead)
-        else:
-            temp = "n/a"
+        temp = "{:.1f}".format(tempRead)
     except:
         temp = "n/a"
     return temp
