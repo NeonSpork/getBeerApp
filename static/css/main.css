@@ -126,6 +126,15 @@ svg {
   animation: showSecretButton 4s step-end forwards;
 }
 
+#fake_error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-height: 100vh;
+  transform: translate(-50%, -50%);
+  animation: hideFakeError 5s step-end forwards;
+}
+
 @-webkit-keyframes showSecretButton {
   0% {
     opacity: 0;
@@ -160,4 +169,48 @@ svg {
   }
   90% {opacity: 0;}
   100% {opacity: 1;} 
+}
+
+@-webkit-keyframes hideFakeError {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  } 
+}
+
+@-moz-keyframes hideFakeError {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  } 
+}
+
+@-o-keyframes hideFakeError {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  } 
+}
+
+@keyframes hideFakeError {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }  
 }

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="138.71289mm"
+   height="68.245598mm"
+   viewBox="0 0 138.71289 68.245598"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="fake_error.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
+  <defs
+     id="defs833">
+    <rect
+       x="5.8799295"
+       y="21.64883"
+       width="90.470734"
+       height="26.726954"
+       id="rect1431" />
+    <rect
+       x="5.8799295"
+       y="21.64883"
+       width="68.688271"
+       height="30.735996"
+       id="rect1425" />
+    <rect
+       x="13.096207"
+       y="10.958051"
+       width="77.775436"
+       height="28.597839"
+       id="rect1417" />
+    <rect
+       x="12.294398"
+       y="9.3544331"
+       width="56.66114"
+       height="38.486813"
+       id="rect1411" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="279.21667"
+     inkscape:cy="173.51965"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1416"
+     inkscape:window-height="1040"
+     inkscape:window-x="222"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata836">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(32.072346,7.9303856)">
+    <rect
+       style="opacity:0.999;fill:#0000ff;fill-opacity:1;stroke-width:0.370016;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1407"
+       width="138.71289"
+       height="68.245598"
+       x="-32.072346"
+       y="-7.9303856"
+       rx="0"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       id="text1409"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1411);mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:none;" />
+    <rect
+       style="opacity:0.999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.268562;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="rect1421"
+       width="63.610149"
+       height="15.768902"
+       x="5.8799295"
+       y="5.8799295"
+       rx="0"
+       ry="15.768902" />
+    <text
+       xml:space="preserve"
+       id="text1415"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:Kongtext;-inkscape-font-specification:'Kongtext, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1417);fill:#0000ff;fill-opacity:1;stroke:none;stroke-opacity:1;"
+       transform="translate(-5.6126601,-4.0090429)"><tspan
+         x="13.095703"
+         y="21.542284"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:Kongtext;-inkscape-font-specification:'Kongtext, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0000ff;fill-opacity:1;stroke:none;stroke-opacity:1">ERROR!</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text1423"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1425);fill:#000000;fill-opacity:1;stroke:none;" />
+    <text
+       xml:space="preserve"
+       id="text1429"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Kongtext;-inkscape-font-specification:'Kongtext, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1431);fill:#ffffff;fill-opacity:1;stroke:none;"
+       transform="translate(1.8708867,7.2162772)"><tspan
+         x="5.8808594"
+         y="24.470658"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Kongtext;-inkscape-font-specification:'Kongtext, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">Initializing...
+</tspan></tspan><tspan
+         x="5.8808594"
+         y="27.998432"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Kongtext;-inkscape-font-specification:'Kongtext, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">
+</tspan></tspan><tspan
+         x="5.8808594"
+         y="31.526207"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Kongtext;-inkscape-font-specification:'Kongtext, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">PROTOCOL:
+</tspan></tspan><tspan
+         x="5.8808594"
+         y="35.053982"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Kongtext;-inkscape-font-specification:'Kongtext, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">HIGHWAY TO DANGERZONE</tspan></tspan></text>
+  </g>
+</svg>
