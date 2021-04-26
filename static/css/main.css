@@ -63,6 +63,11 @@ svg {
                0px 0px 150px #6200ff;
 }
 
+.neonGlowTextRed {
+  color: #fff;
+  text-shadow: 0px 0px 3px #f00, 0px 0px 5px #f00, 0px 0px 7px #f00, 0px 0px 10px #f00, 0px 0px 15px #f00, 0px 0px 30px #f00, 0px 0px 60px #f00, 0px 0px 150px #f00;
+}
+
 .content {
   position: fixed;
   bottom: 0;
@@ -98,30 +103,30 @@ svg {
   right: 2vw;
 }
 
-
+/* 
 #spoutControl_secret {
   -webkit-animation: hideBeerButton 4s step-end forwards;
   -moz-animation: hideBeerButton 4s step-end forwards;
   -o-animation: hideBeerButton 4s step-end forwards;
   animation: hideBeerButton 4s step-end forwards;
-}
+}*/
 
 #crossBones {
   position: fixed;
   bottom: 0;
   right: 2vw;
-  -webkit-animation: showSecretButton 4s step-end forwards;
+  /* -webkit-animation: showSecretButton 4s step-end forwards;
   -moz-animation: showSecretButton 4s step-end forwards;
   -o-animation: showSecretButton 4s step-end forwards;
-  animation: showSecretButton 4s step-end forwards;
+  animation: showSecretButton 4s step-end forwards; */
 }
-
+/*
 #neonGlowText_secret {
   -webkit-animation: changeToRed 4s step-end forwards;
   -moz-animation: changeToRed 4s step-end forwards;
   -o-animation: changeToRed 4s step-end forwards;
   animation: changeToRed 4s step-end forwards;
-}
+} */
 
 #backArrow {
   position: fixed;
@@ -132,13 +137,13 @@ svg {
   -o-animation: showSecretButton 4s step-end forwards;
   animation: showSecretButton 4s step-end forwards;
 }
-
+/* 
 .flickering_secret {
   -webkit-animation: flicker_secret 4s step-end forwards;
   -moz-animation: flicker_secret 4s step-end forwards;
   -o-animation: flicker_secret 4s step-end forwards;
   animation: flicker_secret 4s step-end forwards;
-}
+} */
 
 /* #secret_content{
   -webkit-animation: glitch 3s step-end alternate-reverse infinite;
@@ -351,15 +356,13 @@ svg {
     transform: translate(-22px,15px) skew(21deg);
   }
 } */
-
+/* 
 #secret_content{
   position:absolute;
   width:98vw;
   height:98vh;
   background: url('/static/img/craggs_lounge_secret.svg');
   background-size:100%;
-  /* background-position: center center;
-  background-repeat: no-repeat; */
 }
 #secret_content:before{
   content:'';
@@ -410,9 +413,9 @@ svg {
 	background-position: 0 0;
 	filter:hue-rotate(360deg);
 	}
-}
+} */
 
-@-webkit-keyframes hideBeerButton {
+/* @-webkit-keyframes hideBeerButton {
   90% {opacity: 1;}
   100% {opacity: 0;} 
 }
@@ -430,7 +433,7 @@ svg {
 @keyframes hideBeerButton {
   90% {opacity: 1;}
   100% {opacity: 0;} 
-}
+} */
 
 @-webkit-keyframes showSecretButton {
   0% {
@@ -467,7 +470,7 @@ svg {
   90% {opacity: 0;}
   100% {opacity: 1;} 
 }
-
+/* 
 @-webkit-keyframes changeToRed {
   0% {text-shadow: 0px 0px 3px, 0px 0px 5px #6302ff, 0px 0px 7px #6302ff, 0px 0px 10px #6302ff, 0px 0px 15px #6302ff, 0px 0px 30px #6200ff, 0px 0px 60px #6200ff, 0px 0px 150px #6200ff;}
   50% {text-shadow: 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px, 0px 0px 0px;}
@@ -526,4 +529,4 @@ svg {
   20%{
     opacity:.2
   }
-}
+} */
