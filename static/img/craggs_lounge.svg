@@ -71,7 +71,7 @@
         <feGaussianBlur stdDeviation="2.91" id="feGaussianBlur5129"/>
       </filter>
       <style>
-        @keyframes flicker{0%,10%,6%,8%,to{opacity:1}3%,7%,9%{opacity:.4}}#apostrophe_neon{animation:flicker 5s infinite step-end}#green_leaf_neon{animation:flicker 6s infinite 2s step-end}#neon_1928{animation:flicker 8s infinite 1s step-end}#sunset1_neon{animation:flicker 7s infinite 4s step-end}
+        @keyframes flicker{0%,10%,6%,8%,to{opacity:1}3%,7%,9%{opacity:.4}}#apostrophe_neon{animation:flicker 10s infinite step-end}#green_leaf_neon{animation:flicker 9s infinite 2s step-end}#neon_1928{animation:flicker 8s infinite 1s step-end}#sunset1_neon{animation:flicker 7s infinite 4s step-end}
       </style>
     </defs>
     <g id="g2594" style="mix-blend-mode:normal" display="inline" opacity="1" filter="url(#filter2674)" fill="#6200ff" fill-opacity="1" stroke="#6200ff" stroke-opacity="1">
