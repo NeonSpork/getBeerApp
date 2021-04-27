@@ -28,6 +28,7 @@ except:
             print("Simulating gpio{}, status: {}".format(pin, status))
         HIGH = "GPIO.HIGH"
         LOW = "GPIO.LOW"
+
         def cleanup():
             print("Simulating GPIO.cleanup()")
 
@@ -46,6 +47,7 @@ except:
         def get_temperature():
             return "n/a"
 
+
 @app.route('/getTemp')
 def getTemp():
     try:
@@ -54,6 +56,7 @@ def getTemp():
     except:
         temp = "n/a"
     return temp
+
 
 @app.route('/getPints')
 def getPints():
@@ -66,37 +69,44 @@ def getPints():
     except:
         return "n/a"
 
-@app.route('/', methods= ['GET'])
+
+@app.route('/', methods=['GET'])
 def default():
     temp = getTemp()
     pints = getPints()
-    return render_template('default.html', temp = temp, pints = pints)
+    return render_template('default.html', temp=temp, pints=pints)
+
 
 @app.route('/secret')
 def secret():
     temp = getTemp()
     pints = getPints()
-    return render_template('secret.html', temp = temp, pints = pints)
+    return render_template('secret.html', temp=temp, pints=pints)
+
 
 @app.route('/beginPour')
 def beginPour():
     GPIO.output(beerPin, GPIO.HIGH)
     return 'nothing'
 
+
 @app.route('/endPour')
 def endPour():
     GPIO.output(beerPin, GPIO.LOW)
     return 'nothing'
+
 
 @app.route('/beginPourSECRET')
 def beginPourSECRET():
     GPIO.output(secretPin, GPIO.HIGH)
     return 'nothing'
 
+
 @app.route('/endPourSECRET')
 def endPourSECRET():
     GPIO.output(secretPin, GPIO.LOW)
     return 'nothing'
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
