@@ -13,8 +13,7 @@
     <title>Kegerator App In Progress</title>
     {% block head %}{% endblock %}
 </head>
-
-<body style="visibility: hidden;" onload="js_Load()">
+<body oncontextmenu="return false" style="visibility: hidden;" onload="js_Load()">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
     {% block body %}{% endblock %}
     <script>function js_Load() { document.body.style.visibility = 'visible'; }</script>
